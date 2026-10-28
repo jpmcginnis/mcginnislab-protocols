@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Live/Dead Staining — McGinnis Lab Protocols</title>
+<link rel="stylesheet" href="/assets/style.css?v=3">
+<style>
+  .section-h { font-size: 15px; font-weight: 600; margin: 22px 0 8px; color: var(--fg); }
+</style>
+</head>
+<body>
+  <div class="breadcrumb">
+    <a href="/">Protocols</a> &nbsp;·&nbsp; Histology &amp; Imaging &nbsp;·&nbsp; Live/Dead Staining
+  </div>
+
+  <h1>Live/Dead Staining</h1>
+  <div class="sub">Protocol utilizes Live/Dead Protocol from Molecular Probes/Invitrogen. Organotypic tissue from cranial tissue resected from neurosurgical specimens, cultured for a variable number of days, and taken out of culture for staining. The protocol details the staining and fixative procedure for downstream imaging.</div>
+
+  <h2 class="section-h">Materials</h2>
+  <ul style="font-size:13px;line-height:1.7;">
+    <li>organotypic tissue</li>
+    <li>LIVE/DEAD Viability/Cytotoxicity Kit <em>for mammalian cells</em>
+      <ul>
+        <li>Reagents should be stored sealed, desiccated, protected from light, and frozen at under −20°C.</li>
+        <li>Allow reagents to warm to room temperature and centrifuge briefly.</li>
+        <li>Prepare Calcein AM in aqueous working solutions immediately prior to use, and use within one day.</li>
+      </ul>
+    </li>
+    <li>1× PBS for cell culture</li>
+    <li>Hoechst</li>
+    <li>4% PFA in 1× PBS</li>
+    <li>rubber well(s)</li>
+    <li>glass slides</li>
+    <li>cover slips</li>
+    <li>OCT</li>
+    <li>embedding molds</li>
+  </ul>
+
+  <div class="callout">
+    <strong>Handwritten per-slice recipe (annotation on page 1):</strong> 1 mL PBS · 2 μL EthD-1 · 0.5 μL Calcein AM · 0.5 μL Hoechst.
+  </div>
+
+  <div class="recipe-header">
+    <h2>Procedure</h2>
+    <div class="controls">
+      <span class="progress" id="progress">0 of 0 checked</span>
+      <button id="reset-checklist" type="button">Reset checklist</button>
+    </div>
+  </div>
+
+  <div class="step-section" data-checklist-id="live-dead-v1">
+
+    <h3 class="section-h">Preparing solutions</h3>
+    <table class="recipe">
+      <thead><tr><th class="check"></th><th class="num">#</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr><td class="check"><input type="checkbox" data-row="1"></td><td class="num">1</td><td>Remove the LIVE/DEAD Reagent from the freezer and allow them to warm to room temperature.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="2"></td><td class="num">2</td><td>Add 20 μL of the supplied 2 mM EthD-1 stock solution to 10 mL of sterile tissue-culture-grade D-PBS. Vortex to ensure thorough mixing. This gives an approximate 4 μM EthD-1 solution.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="3"></td><td class="num">3</td><td>Combine reagents by transferring 5 μL of Calcein AM stock solution to 10 mL EthD-1 solution. Vortex. <em>+ 0.5 μL Hoechst (per handwritten annotation).</em></td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="4"></td><td class="num">4</td><td><strong>Dead control:</strong> Prepare 70% methanol solution. Be extremely careful — this solution is highly toxic.</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="section-h">LIVE/DEAD Stain</h3>
+    <table class="recipe">
+      <thead><tr><th class="check"></th><th class="num">#</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr><td class="check"><input type="checkbox" data-row="5"></td><td class="num">5</td><td>Transfer tissue OUT of plate into new plate in cell culture hood.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="6"></td><td class="num">6</td><td>Remove this plate with single slice out of the cell culture hood.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="7"></td><td class="num">7</td><td>Add 70% methanol in fume hood. <strong>DO NOT DO IN CELL CULTURE HOOD.</strong></td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="8"></td><td class="num">8</td><td>Wait 30 minutes for methanol-incubated tissue.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="9"></td><td class="num">9</td><td>After 30 minutes, take another slice from the plate, and move to new plate.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="10"></td><td class="num">10</td><td>Move plate out of cell culture hood.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="11"></td><td class="num">11</td><td>To both plates, remove any liquid and wash 1× PBS 1 time for 5 min.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="12"></td><td class="num">12</td><td>Add LIVE/DEAD solution from Step 3. Incubate for 45 minutes. Up to 2 hours.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="13"></td><td class="num">13</td><td>Fix both tissue samples for 30 min in 4% PFA.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="14"></td><td class="num">14</td><td>Wash 1× with 1× PBS.</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="section-h">Nuclear Staining</h3>
+    <table class="recipe">
+      <thead><tr><th class="check"></th><th class="num">#</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr><td class="check"><input type="checkbox" data-row="15"></td><td class="num">15</td><td style="text-decoration:line-through;color:var(--muted);">Add Hoechst nuclear stain (1:1000×) to both tissue samples, and wash 3× with PBS.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="16"></td><td class="num">16</td><td>Cut each tissue sample in half.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="17"></td><td class="num">17</td><td>Mount one half of each tissue sample immediately on deep well slide with fluoromount and image. Image on STED scope on 9th floor.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="18"></td><td class="num">18</td><td>Place other half of each tissue sample in 30% sucrose overnight. Freeze slice with OCT the following day and slice on cryostat at <strong>20–50 μm</strong>. Mount on slides; image using STED 9th floor.</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="section-h">Imaging</h3>
+    <table class="recipe">
+      <thead><tr><th class="check"></th><th class="num">#</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr><td class="check"><input type="checkbox" data-row="19"></td><td class="num">19</td><td>Use these channels:
+          <ul style="margin:4px 0 0 20px;">
+            <li>Blue Channel / Nuclear (ex: 350 nm / em: 461 nm)</li>
+            <li>Green Channel / Live Cells (ex: ~495 nm / em: ~515 nm)</li>
+            <li>Red Channel / Dead Cells (ex: ~528 / 617 nm)</li>
+          </ul>
+        </td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="20"></td><td class="num">20</td><td>Take z-stack appropriate to slices.</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="section-h">Quantification</h3>
+    <table class="recipe">
+      <thead><tr><th class="check"></th><th class="num">#</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr><td class="check"><input type="checkbox" data-row="21"></td><td class="num">21</td><td>Use imaris. Ask EKT.</td></tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <footer>
+    <a href="https://mcginnislab.org">mcginnislab.org</a>
+    &nbsp;·&nbsp;
+    <a href="/">protocols</a>
+  </footer>
+
+  <script src="/assets/reagents.js"></script>
+  <script src="/assets/checklist.js?v=2"></script>
+</body>
+</html>

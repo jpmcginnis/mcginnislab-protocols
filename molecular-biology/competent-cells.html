@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chemical Competent Cells (RbCl) — McGinnis Lab Protocols</title>
+<link rel="stylesheet" href="/assets/style.css?v=3">
+<style>
+  .section-h { font-size: 15px; font-weight: 600; margin: 22px 0 8px; color: var(--fg); }
+  .buffer-table { margin: 8px 0 16px; font-size: 13px; }
+  .buffer-table th { background: #f6f8fa; }
+  .buffer-table td.num-cell { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 12px; }
+</style>
+</head>
+<body>
+  <div class="breadcrumb">
+    <a href="/">Protocols</a> &nbsp;·&nbsp; Molecular Biology &nbsp;·&nbsp; Chemical Competent Cells
+  </div>
+
+  <h1>Chemical Competent Cell Production <span class="scale">(rubidium chloride)</span></h1>
+  <div class="sub">Lab-standard RbCl method based on Promega <em>Protocols and Applications Guide</em> (3rd edition, p. 45–46). Yields ~1.5 × 10⁷ cfu/μg; cells usable for up to a year at −70°C.</div>
+
+  <div class="callout">
+    <strong>Lab-typical scale:</strong> 500 mL growth culture (2 × 250 mL in centrifuge bottles). Uses 100 mL TFB1 and 20 mL TFB2 total. Keep everything ice-cold from Step 3 onward.
+  </div>
+
+  <h2 class="section-h">Prerequisite buffers (prepare in advance; store at RT or 4°C, use ice-cold)</h2>
+
+  <h3 class="section-h">TFB1</h3>
+  <table class="recipe buffer-table">
+    <thead><tr><th>Component</th><th>Concentration</th><th>FW</th><th>Grams (100 mL, lab scale)</th></tr></thead>
+    <tbody>
+      <tr><td>Rubidium chloride (RbCl)</td><td class="num-cell">100 mM</td><td class="num-cell">120.92</td><td class="vol-primary">1.209 g</td></tr>
+      <tr><td>Manganese chloride (MnCl₂·H₂O)</td><td class="num-cell">50 mM</td><td class="num-cell">197.91</td><td class="vol-primary">0.629 g</td></tr>
+      <tr><td>Potassium acetate</td><td class="num-cell">30 mM</td><td class="num-cell">98.14</td><td class="vol-primary">0.294 g</td></tr>
+      <tr><td>Calcium chloride (CaCl₂·2H₂O)</td><td class="num-cell">10 mM</td><td class="num-cell">147.02</td><td class="vol-primary">0.111 g</td></tr>
+      <tr><td>Glycerol</td><td class="num-cell">15%</td><td class="num-cell">—</td><td class="vol-primary">15 mL</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:12px;color:var(--muted);">Adjust pH to <strong>5.8</strong> with 1 M acetic acid (dilute from glacial ~17.4 N). <strong>Do NOT overshoot</strong> — if raised with hydroxide, manganese falls out of solution. Filter-sterilize (0.2 μm). Store RT or 4°C; bring to 4°C before use.</p>
+
+  <h3 class="section-h">TFB2</h3>
+  <table class="recipe buffer-table">
+    <thead><tr><th>Component</th><th>Concentration</th><th>FW</th><th>Grams (20 mL, lab scale)</th></tr></thead>
+    <tbody>
+      <tr><td>MOPS</td><td class="num-cell">10 mM</td><td class="num-cell">209.3</td><td class="vol-primary">0.042 g</td></tr>
+      <tr><td>Calcium chloride (CaCl₂·2H₂O)</td><td class="num-cell">75 mM</td><td class="num-cell">147.02</td><td class="vol-primary">0.166 g</td></tr>
+      <tr><td>Rubidium chloride (RbCl)</td><td class="num-cell">10 mM</td><td class="num-cell">120.92</td><td class="vol-primary">0.024 g</td></tr>
+      <tr><td>Glycerol</td><td class="num-cell">15%</td><td class="num-cell">—</td><td class="vol-primary">3 mL</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:12px;color:var(--muted);">Adjust pH to <strong>6.5</strong> with 1 M KOH. Do NOT overshoot. Filter-sterilize (0.2 μm). Store RT or 4°C; bring to 4°C before use.</p>
+
+  <h3 class="section-h">2× YT media (per 1 L)</h3>
+  <ul style="font-size:13px;line-height:1.7;">
+    <li>16 g Bacto tryptone</li>
+    <li>10 g Bacto yeast extract</li>
+    <li>5 g NaCl</li>
+    <li>Add 900 mL water, adjust pH to 7.0 with 5 N NaOH, bring to 1 L, autoclave.</li>
+    <li><em>Or TEKZR097 in CCF, 48 h delivery (~$40).</em></li>
+  </ul>
+
+  <div class="recipe-header">
+    <h2>Procedure</h2>
+    <div class="controls">
+      <span class="progress" id="progress">0 of 0 checked</span>
+      <button id="reset-checklist" type="button">Reset checklist</button>
+    </div>
+  </div>
+
+  <table class="recipe" data-checklist-id="competent-cells-v1">
+    <thead><tr><th class="check"></th><th class="num">#</th><th>Action</th></tr></thead>
+    <tbody>
+      <tr><td class="check"><input type="checkbox" data-row="1"></td><td class="num">1</td><td>Inoculate a single colony from an LB plate (or a scoop from glycerol stock) into <strong>20 mL SOC media in 125 mL flask</strong>. Incubate overnight at 37°C with shaking (approximately 225 rpm). Keep everything sterile since you do not use any antibiotics.</td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="2"></td><td class="num">2</td><td>On the following day, use <strong>5 mL</strong> of the overnight culture to inoculate <strong>500 mL</strong> of LB medium containing <strong>20 mM MgSO₄</strong> (2.46 g MgSO₄ in 500 mL LB broth). This results in a 1:100 dilution. Grow the cells in a 1 L baffled flask until the A₆₀₀ reaches 0.4–0.6 (typically 2–3 h). A 1 L flask is necessary for proper aeration.</td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="3"></td><td class="num">3</td><td>Pellet the cells by centrifugation at 4,500 × <em>g</em> for 5 min at 4°C. For a 500 mL culture, use two 250 mL centrifuge bottles in a large rotor (Sorvall GSA, Beckman JA-14). <strong>Quick-rinse</strong> each pellet with a little TFB1 to remove all traces of media.</td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="4"></td><td class="num">4</td><td>Gently resuspend the cell pellets in 0.4 × original culture volume of ice-cold TFB1 — <strong>100 mL TFB1 total, 50 mL per bottle</strong> — using a 10 mL serological pipette. Combine the resuspended cells in one bottle. For the remaining steps, keep cells on ice and chill all pipets, tubes, and flasks.</td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="5"></td><td class="num">5</td><td>Incubate the resuspended cells on ice for 5 minutes.</td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="6"></td><td class="num">6</td><td>Pellet the cells by centrifugation at 4,500 × <em>g</em> for 5 min at 4°C.</td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="7"></td><td class="num">7</td><td>Gently resuspend the cells in 1/25 of the original culture volume of ice-cold TFB2 — <strong>20 mL TFB2 for us</strong>. <br><strong>Note:</strong> Treat the competent cells gently; they are highly sensitive to handling and elevated temperature.</td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="8"></td><td class="num">8</td><td>Incubate the cells on ice for 15–60 minutes, then aliquot into prechilled tubes. Quick-freeze the tubes in liquid N₂ and store at −70°C.</td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="9"></td><td class="num">9</td><td>Test competency by transforming 100 pg of a plasmid. Heat shock for 45 sec at 42°C.</td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="section-h">Additional notes</h2>
+  <ol style="font-size:13px;line-height:1.6;">
+    <li>Cells do NOT resuspend easily in TFB1. Be patient and gentle (pipet up and down, swirl the bottle — do not vortex). A perfectly uniform suspension is uncommon; small clumps are OK. Keep bottles on ice while resuspending in TFB1.</li>
+    <li>Cells resuspend much more easily in TFB2. Usually let sit 45 min to 1 h before aliquoting.</li>
+    <li>Expected competency with this procedure: ~1.5 × 10⁷ cfu/μg. Cells usable for up to a year at −70°C.</li>
+    <li>Heat shock for 45 sec at 42°C during test transformation.</li>
+  </ol>
+
+  <h2 class="section-h">Source</h2>
+  <p style="font-size:13px;line-height:1.6;">
+    Procedure from Promega <em>Protocols and Applications Guide</em> (3rd edition), p. 45–46. Lab additions in bold where our scale differs from the printed defaults.
+  </p>
+
+  <footer>
+    <a href="https://mcginnislab.org">mcginnislab.org</a>
+    &nbsp;·&nbsp;
+    <a href="/">protocols</a>
+  </footer>
+
+  <script src="/assets/reagents.js"></script>
+  <script src="/assets/checklist.js?v=2"></script>
+</body>
+</html>
