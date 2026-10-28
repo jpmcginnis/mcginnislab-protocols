@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Annealing Oligos — McGinnis Lab Protocols</title>
+<link rel="stylesheet" href="/assets/style.css?v=3">
+</head>
+<body>
+  <div class="breadcrumb">
+    <a href="/">Protocols</a> &nbsp;·&nbsp; Molecular Biology &nbsp;·&nbsp; Annealing Oligos
+  </div>
+
+  <h1>Annealing Oligos</h1>
+  <div class="sub">PCR-tube anneal of complementary oligonucleotides from 100 μM stocks. Dilute 100× after anneal.</div>
+
+  <div class="recipe-header">
+    <h2>Reaction mix (per PCR tube)</h2>
+    <div class="controls">
+      <span class="progress" id="progress">0 of 0 checked</span>
+      <button id="reset-checklist" type="button">Reset checklist</button>
+    </div>
+  </div>
+
+  <table class="recipe" data-checklist-id="annealing-oligos-v1">
+    <thead><tr><th class="check"></th><th class="num">#</th><th>Component</th><th>Volume</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td class="check"><input type="checkbox" data-row="1"></td><td class="num">1</td><td>Millipore H₂O</td><td class="vol-primary">25 μL</td><td></td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="2"></td><td class="num">2</td><td>Restriction buffer</td><td class="vol-primary">5 μL</td><td class="notes">We used CutSmart</td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="3"></td><td class="num">3</td><td>Oligo 1</td><td class="vol-primary">10 μL</td><td class="notes">From 100 μM stock</td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="4"></td><td class="num">4</td><td>Oligo 2</td><td class="vol-primary">10 μL</td><td class="notes">From 100 μM stock</td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="5"></td><td class="num">5</td><td>Run PCR program (below)</td><td></td><td></td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="6"></td><td class="num">6</td><td>Dilute annealed oligos</td><td class="vol-primary">100×</td><td class="notes">Dilute before use in downstream cloning</td></tr>
+    </tbody>
+  </table>
+
+  <h2>PCR program</h2>
+  <table class="recipe">
+    <thead><tr><th class="num">Step</th><th>Temp</th><th>Time</th></tr></thead>
+    <tbody>
+      <tr><td class="num">1</td><td class="vol-primary">95°C</td><td>2 min (denature)</td></tr>
+      <tr><td class="num">2</td><td class="vol-primary">95°C → 25°C</td><td>ramp over 45 min (slow anneal)</td></tr>
+      <tr><td class="num">3</td><td class="vol-primary">4°C</td><td>hold</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Notes</h2>
+  <ul style="font-size:13px;color:var(--muted);line-height:1.6;">
+    <li>Jog annealing (quick anneal) also works if the slow ramp is unavailable.</li>
+    <li>After the 100× dilution, annealed oligos are ready for ligation into a linearized vector.</li>
+  </ul>
+
+  <footer>
+    <a href="https://mcginnislab.org">mcginnislab.org</a>
+    &nbsp;·&nbsp;
+    <a href="/">protocols</a>
+  </footer>
+
+  <script src="/assets/reagents.js"></script>
+  <script src="/assets/checklist.js?v=2"></script>
+</body>
+</html>

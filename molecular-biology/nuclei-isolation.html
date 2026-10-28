@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nuclei Isolation (old way) — McGinnis Lab Protocols</title>
+<link rel="stylesheet" href="/assets/style.css?v=3">
+<style>
+  .section-h { font-size: 15px; font-weight: 600; margin: 22px 0 8px; color: var(--fg); }
+  .buffer-table { margin: 8px 0 16px; font-size: 13px; }
+  .buffer-table th { background: #f6f8fa; }
+  .buffer-table td.num-cell { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 12px; }
+  .mat-table th { background: #f6f8fa; }
+  .mat-table td { font-size: 12px; }
+</style>
+</head>
+<body>
+  <div class="breadcrumb">
+    <a href="/">Protocols</a> &nbsp;·&nbsp; Molecular Biology &nbsp;·&nbsp; Nuclei Isolation (old way)
+  </div>
+
+  <h1>Nuclei Isolation for Single-Nucleus RNAseq <span class="scale">— old way, from Suyang Bao (Arenkiel Lab)</span></h1>
+  <div class="sub">Adapted from Yanyan Qi's (Hongjie Li Lab) "single-nucleus RNAseq" protocol and <em>Isolation and RNA sequencing of single nuclei from Drosophila tissues</em> (DOI: 10.1016/j.xpro.2022.101417). Buffer recipe adapted from 10x Genomics demonstrated protocol <strong>Nuclei Isolation from Cell Suspensions &amp; Tissues for Single Cell RNA Sequencing</strong>, CG000124 Rev F. Protocol version 1.5, Sep 22 2023.</div>
+
+  <div class="callout">
+    <strong>Critical:</strong>
+    <ul style="margin: 4px 0 0 20px;">
+      <li>All steps on ice or 4°C.</li>
+      <li>Buffers made <strong>fresh</strong> the day of extraction, on ice, stored on ice.</li>
+      <li><strong>Avoid vortexing</strong> — may damage nuclei. Pipette to mix instead.</li>
+    </ul>
+  </div>
+
+  <h2 class="section-h">Preparations</h2>
+  <ol style="font-size:13px;line-height:1.6;">
+    <li><strong>Clean Dounce homogenizer set (≥1 day in advance):</strong> wash with tap water, then 70% ethanol (1 mL into glass tube, pestle A &gt;5 strokes, pestle B &gt;5 strokes, discard ethanol). Rinse with ddH₂O under running MilliQ, then with 1 mL nuclease-free water (pestle A then B, aspirate). Autoclave in sterilization pouches. <em>(Lab: JP bench, top shelf.)</em></li>
+    <li><strong>Clean bench top &amp; pipettes</strong> with 70% ethanol, then RNaseZAP.</li>
+    <li><strong>Buffer preparation:</strong> make fresh on the day of extraction.</li>
+  </ol>
+
+  <h3 class="section-h">Lysis Buffer (for 2 mL)</h3>
+  <table class="recipe buffer-table">
+    <thead><tr><th>Component</th><th>Stock</th><th>Final</th><th>Volume</th><th>Lab location</th></tr></thead>
+    <tbody>
+      <tr><td>Tris-HCl (pH 7.4)</td><td class="num-cell">1 M</td><td class="num-cell">10 mM</td><td class="vol-primary">20 μL</td><td>RNA cabinet (under JP/Ben's bench)</td></tr>
+      <tr><td>NaCl</td><td class="num-cell">5 M</td><td class="num-cell">10 mM</td><td class="vol-primary">4 μL</td><td>RNA cabinet</td></tr>
+      <tr><td>MgCl₂</td><td class="num-cell">1 M</td><td class="num-cell">3 mM</td><td class="vol-primary">6 μL</td><td>RNA cabinet</td></tr>
+      <tr><td>IGEPAL CA-630</td><td class="num-cell">10%</td><td class="num-cell">0.05%</td><td class="vol-primary">10 μL</td><td>−20°C under Ben's bench</td></tr>
+      <tr><td>DTT</td><td class="num-cell">1 M</td><td class="num-cell">1 mM</td><td class="vol-primary">2 μL</td><td>−20°C (small aliquot box)</td></tr>
+      <tr><td>RNase inhibitor</td><td class="num-cell">40 U/μL</td><td class="num-cell">0.2 U/μL</td><td class="vol-primary">10 μL</td><td>−20°C under bench</td></tr>
+      <tr><td>Nuclease-free water</td><td colspan="2"></td><td class="vol-primary">1.95 mL</td><td>RNA cabinet</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:12px;color:var(--muted);">Note: IGEPAL CA-630 is the lysis reagent. For 10% stock, dilute 1 mL 100% IGEPAL into 9 mL nuclease-free water. Optimal final concentration is tissue-dependent; for brain tissue try 0.025%–0.1%. OB nuclei: 0.05% works well.</p>
+
+  <h3 class="section-h">Resuspension Buffer (for 10 mL)</h3>
+  <table class="recipe buffer-table">
+    <thead><tr><th>Component</th><th>Stock</th><th>Final</th><th>Volume</th><th>Lab location</th></tr></thead>
+    <tbody>
+      <tr><td>BSA</td><td class="num-cell">10%</td><td class="num-cell">1%</td><td class="vol-primary">1 mL</td><td>Hallway 4°C</td></tr>
+      <tr><td>RNase inhibitor</td><td class="num-cell">40 U/μL</td><td class="num-cell">0.2 U/μL</td><td class="vol-primary">50 μL</td><td>−20°C Ben's</td></tr>
+      <tr><td>1× PBS</td><td colspan="2"></td><td class="vol-primary">8.95 mL</td><td></td></tr>
+    </tbody>
+  </table>
+
+  <h3 class="section-h">10× Collection Buffer (for 2 mL)</h3>
+  <table class="recipe buffer-table">
+    <thead><tr><th>Component</th><th>Stock</th><th>Final</th><th>Volume</th></tr></thead>
+    <tbody>
+      <tr><td>BSA</td><td class="num-cell">10%</td><td class="num-cell">1%</td><td class="vol-primary">200 μL</td></tr>
+      <tr><td>RNase inhibitor</td><td class="num-cell">40 U/μL</td><td class="num-cell">1 U/μL</td><td class="vol-primary">50 μL</td></tr>
+      <tr><td>1× PBS</td><td colspan="2"></td><td class="vol-primary">1.75 mL</td></tr>
+    </tbody>
+  </table>
+
+  <p style="font-size:13px;line-height:1.6;"><strong>Pre-cool equipment:</strong> Dounce homogenizer on ice ≥30 min (last step must be on ice). Centrifuge for 1.5 mL tubes to 4°C.<br>
+  <strong>Pre-label tubes:</strong> all EP and FACS tubes, arrange in order on ice.</p>
+
+  <div class="recipe-header">
+    <h2>Procedure</h2>
+    <div class="controls">
+      <span class="progress" id="progress">0 of 0 checked</span>
+      <button id="reset-checklist" type="button">Reset checklist</button>
+    </div>
+  </div>
+
+  <div class="step-section" data-checklist-id="nuclei-isolation-v1">
+
+    <h3 class="section-h">Nuclei isolation</h3>
+    <table class="recipe">
+      <thead><tr><th class="check"></th><th class="num">#</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr><td class="check"><input type="checkbox" data-row="1"></td><td class="num">1</td><td>If using frozen sample, thaw from −80°C on ice completely (OB: 5–8 min).</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="2"></td><td class="num">2</td><td>Add 1 mL lysis buffer. Carefully transfer sample + lysis buffer into Dounce glass tube.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="3"></td><td class="num">3</td><td>Release nuclei: ~<strong>20 strokes loose pestle A</strong> (no small chunks visible), then <strong>20–40 strokes tight pestle B</strong> (OB: 30 strokes). Keep Dounce on ice; avoid bubbles.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="4"></td><td class="num">4</td><td>Filter 1 mL through 35 μm cell strainer cap into 5 mL FACS tube.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="5"></td><td class="num">5</td><td>(Optional, recommended) Coat EP tubes: add 300 μL 1% BSA, vortex, discard.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="6"></td><td class="num">6</td><td>Filter samples through 40 μm Flowmi cell strainer into 1.5 mL EP tube. <em>(JP bench, top shelf.)</em></td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="7"></td><td class="num">7</td><td>Centrifuge 5 min × 500 × <em>g</em> at 4°C. Max: 10 min × 1000 × <em>g</em>. <strong>Lab variant:</strong> we used 900 × <em>g</em> for 10 min.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="8"></td><td class="num">8</td><td>Discard supernatant, keep nuclei pellet intact.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="9"></td><td class="num">9</td><td>Resuspend nuclei pellet in 300–600 μL resuspension buffer (OB: 500 μL). Pipette ~30× to completely resuspend.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="10"></td><td class="num">10</td><td style="text-decoration:line-through;color:var(--muted);">Filter samples again through 40 μm Flowmi cell strainer into new 1.5 mL EP tube. (Can be skipped for OB; <strong>JP skips this</strong>.)</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="11"></td><td class="num">11</td><td>Filter samples through 35 μm cell strainer cap into new 5 mL FACS tube. <em>(RNA cabinet.)</em></td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="section-h">FACS sorting (Sony MA900, 100 μm chip)</h3>
+    <table class="recipe">
+      <thead><tr><th class="check"></th><th class="num">#</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr><td class="check"><input type="checkbox" data-row="12"></td><td class="num">1</td><td>Prepare unstained control: 20 μL unstained nuclei into 200–250 μL resuspension buffer in new FACS tube. Used for FACS gate setup.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="13"></td><td class="num">2</td><td>Stain samples in FACS tube with <strong>Hoechst-33342 (1:500)</strong>. Pipette briefly to mix. Incubate &gt;5 min.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="14"></td><td class="num">3</td><td>Set up sorter prior to nuclear extraction (30–60 min). Pre-cool sample + collection chambers to 4°C.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="15"></td><td class="num">4</td><td>Load unstained control first to set negative gate.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="16"></td><td class="num">5</td><td>Coat each collection tube: 1 mL 1% BSA in 5 mL FACS tube, vortex, discard.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="17"></td><td class="num">6</td><td>Load collection tube with 10× Collection Buffer sized to estimated final collection volume (e.g. 4 mL final → 400 μL 10× buffer).</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="18"></td><td class="num">7</td><td>Load Hoechst-stained nuclei + collection tube. Gate tightly on Hoechst-high population to exclude debris. Use FSC/SSC to separate singlets from multiplets.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="19"></td><td class="num">8</td><td>Sort 100–200k nuclei per 10x run (minimum ~100k).</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="20"></td><td class="num">9</td><td>Evaluate quality + concentration on C-Chip under microscope. Centrifuge 10 min × 1000 × <em>g</em> at 4°C (swinging bucket). Discard supernatant without touching pellet; resuspend in lower volume. Re-count on C-Chip, adjust volume. (Typically ~16k nuclei loaded per 10x run.) Temporarily save supernatant on ice until resuspended nuclei verified.</td></tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <h2 class="section-h">Material table</h2>
+  <table class="recipe mat-table">
+    <thead><tr><th>Product</th><th>Vendor</th><th>Catalog</th></tr></thead>
+    <tbody>
+      <tr><td>KIMBLE Dounce tissue grinder set (2 mL complete)</td><td rowspan="7">Millipore-Sigma</td><td>D8938</td></tr>
+      <tr><td>Trizma Hydrochloride Solution, pH 7.4</td><td>T2194</td></tr>
+      <tr><td>Sodium Chloride Solution, 5 M</td><td>59222C</td></tr>
+      <tr><td>Magnesium Chloride Solution, 1 M</td><td>M1028</td></tr>
+      <tr><td>IGEPAL CA-630</td><td>I8896</td></tr>
+      <tr><td>DTT, 1 M</td><td>646563</td></tr>
+      <tr><td>Protector RNase Inhibitor</td><td>3335399001</td></tr>
+      <tr><td>MACS® BSA Stock Solution</td><td>Miltenyi Biotec</td><td>130-091-376</td></tr>
+      <tr><td>Falcon 5 mL Round Bottom Polystyrene Test Tube, with Cell Strainer Snap Cap</td><td rowspan="2">Corning</td><td>352235</td></tr>
+      <tr><td>1× Phosphate-Buffered Saline, pH 7.4</td><td>21-040-CV</td></tr>
+      <tr><td>FLOWMI 40 μm Cell Strainers</td><td>Bel-Art</td><td>H13680-0040</td></tr>
+      <tr><td>RNaseZap™ RNase Decontamination Solution</td><td rowspan="3">ThermoFisher</td><td>AM9780</td></tr>
+      <tr><td>Hoechst-33342</td><td>H3570</td></tr>
+      <tr><td>UltraPure™ DNase/RNase-Free Distilled Water</td><td>10977015</td></tr>
+      <tr><td>C-Chip Disposable Hemacytometers by SKC, Inc</td><td>Fisher Scientific</td><td>22-600-100</td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="section-h">Lab notes</h2>
+  <ul style="font-size:13px;color:var(--muted);line-height:1.6;">
+    <li><strong>12/4/23 batch:</strong> sampled 1/23/24. Had abnormal-shaped nuclei esp. in day14+BC comparison, pre-sorted d14 untreated to sorted d14 untreated — presort nuclei much more normal. snRNA-seq quality ended up just fine.</li>
+    <li><strong>Scale notes:</strong> for 8/21 samples used 1 mL lysis buffer per sample (−20°C, 16 slices discs); for 12/4/23 used 4 tubes (~32 discs) per sample, which gave really big nuclei pellet — could have used ½ or ¼ even starting material.</li>
+    <li>If &gt;4 samples, two people work in parallel to shorten total time.</li>
+  </ul>
+
+  <footer>
+    <a href="https://mcginnislab.org">mcginnislab.org</a>
+    &nbsp;·&nbsp;
+    <a href="/">protocols</a>
+  </footer>
+
+  <script src="/assets/reagents.js"></script>
+  <script src="/assets/checklist.js?v=2"></script>
+</body>
+</html>
