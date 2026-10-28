@@ -74,5 +74,10 @@
 
   "brainphys-medium": { "name": "BrainPhys Neuronal Medium", "vendor": "STEMCELL Technologies", "catalog": "05790", "storage": "4°C (fridge); refrigerated only, NOT frozen", "form": "Ready-made liquid base", "location": "TBD" },
   "sm1-supplement": { "name": "NeuroCult SM1 Neuronal Supplement", "vendor": "STEMCELL Technologies", "catalog": "05711", "storage": "-20°C freezer (behind bench, Culture Media Comparison Box); aliquot into 2 mL portions after first thaw", "form": "50× liquid supplement", "location": "Culture Media Comparison Box, −20° behind bench" },
-  "n2a-supplement": { "name": "N2 Supplement-A", "vendor": "STEMCELL Technologies", "catalog": "07152", "storage": "-20°C freezer (behind bench, Culture Media Comparison Box); aliquot into 1 mL portions after first thaw", "form": "100× liquid supplement", "location": "Culture Media Comparison Box, −20° behind bench" }
+  "n2a-supplement": { "name": "N2 Supplement-A", "vendor": "STEMCELL Technologies", "catalog": "07152", "storage": "-20°C freezer (behind bench, Culture Media Comparison Box); aliquot into 1 mL portions after first thaw", "form": "100× liquid supplement", "location": "Culture Media Comparison Box, −20° behind bench" },
+
+  "nmdg": { "name": "NMDG (N-methyl-D-glucamine)", "vendor": "Sigma", "catalog": "M2004 (verify grade)", "storage": "Powder shelf (room temp)", "form": "Powder (MW 195.21); weigh direct", "location": "TBD" },
+  "thiourea": { "name": "Thiourea", "vendor": "Sigma", "catalog": "T8656 (verify)", "storage": "Chemicals room (powder)", "form": "Powder (MW 76.12); weigh direct", "location": "Chemicals room" },
+  "cacl2-anhydrous": { "name": "CaCl₂ (anhydrous)", "vendor": "Sigma", "catalog": "C4901", "storage": "Powder — benchtop / desiccator (hygroscopic)", "form": "Anhydrous powder (MW 110.98); weigh direct", "location": "TBD" },
+  "hcl-5m": { "name": "HCl 5 M", "vendor": "In-lab dilution from concentrated HCl", "catalog": "—", "storage": "Benchtop (fume hood for prep)", "form": "5 M aqueous HCl for pH adjustment; add 100–200 μL at a time", "location": "TBD" }
 }

@@ -23,23 +23,26 @@
     line-height: 1.5;
     max-width: 720px;
     margin: 0 auto;
-    padding: 48px 24px 96px;
+    padding: 32px 24px 72px;
   }
   h1 {
     font-size: 22px;
     font-weight: 600;
-    margin: 0 0 6px 0;
+    margin: 0 0 4px 0;
   }
   .sub {
     color: var(--muted);
     font-size: 14px;
-    margin-bottom: 36px;
+    margin-bottom: 20px;
   }
   h2 {
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 600;
-    margin: 32px 0 10px;
-    padding-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    margin: 18px 0 6px;
+    padding-bottom: 4px;
     border-bottom: 1px solid var(--border);
   }
   ul.protocols {
@@ -48,8 +51,8 @@
     margin: 0;
   }
   ul.protocols li {
-    padding: 12px 0;
-    border-bottom: 1px solid var(--border);
+    padding: 6px 0;
+    border-bottom: 1px solid #f0f0f0;
   }
   ul.protocols li:last-child { border-bottom: none; }
   ul.protocols a {
@@ -61,23 +64,9 @@
   ul.protocols a:hover { text-decoration: underline; }
   ul.protocols .desc {
     color: var(--muted);
-    font-size: 13px;
-    margin-top: 4px;
-  }
-  ul.protocols .meta {
-    color: var(--muted);
     font-size: 12px;
-    margin-top: 4px;
-    font-family: ui-monospace, "SF Mono", Menlo, monospace;
-  }
-  .placeholder {
-    padding: 24px;
-    background: #f6f8fa;
-    border: 1px dashed var(--border);
-    border-radius: 6px;
-    color: var(--muted);
-    font-size: 13px;
-    text-align: center;
+    margin-top: 1px;
+    line-height: 1.4;
   }
   .notice {
     display: inline-block;
@@ -91,8 +80,8 @@
     letter-spacing: 0.04em;
   }
   footer {
-    margin-top: 48px;
-    padding-top: 16px;
+    margin-top: 36px;
+    padding-top: 12px;
     border-top: 1px solid var(--border);
     color: var(--muted);
     font-size: 12px;
@@ -102,29 +91,37 @@
 </head>
 <body>
   <h1>McGinnis Lab — Protocols</h1>
-  <div class="sub">Living protocols for lab work. Hover any reagent in a protocol to see vendor, catalog #, and freezer location.</div>
+  <div class="sub">Living protocols. Hover any reagent inside a protocol to see vendor, catalog #, and (eventually) freezer location.</div>
+
+  <h2>Artificial CSF</h2>
+  <ul class="protocols">
+    <li>
+      <a href="/acsf">Artificial CSF (NMDG-SCS) — 500 mL</a>
+      <div class="desc">NMDG-based slice cutting / perfusion solution. 11 powders weighed, pH to 7.3–7.4 with 5 M HCl, osm titrated to 295–305.</div>
+    </li>
+  </ul>
 
   <h2>Media Formulations</h2>
   <ul class="protocols">
     <li>
       <a href="/media/oscm">OSCM — Organotypic Slice Culture Medium (1 L)</a>
-      <div class="desc">Defined serum-free medium for ex vivo organotypic human brain slice culture. 40 components, good for 2 weeks at 4°C.</div>
+      <div class="desc">Defined serum-free medium for ex vivo organotypic brain slice culture. 40 components; 2-week shelf life at 4°C.</div>
     </li>
     <li>
       <a href="/media/miles">Miles Media (100 mL)</a>
-      <div class="desc">Defined serum-free medium with tighter composition control than OSCM. 9-step batch protocol, 7 combined + 9 individual + bulk protein stocks + 6 fresh-weighed reagents. Make fresh weekly; 7-day shelf life at 4°C.</div>
+      <div class="desc">Defined serum-free, tighter composition than OSCM. 9-step batch, combined + individual + bulk protein stocks + fresh-weighed reagents. 7-day shelf life.</div>
     </li>
     <li>
       <a href="/media/adams">Adam's Media (100 mL)</a>
-      <div class="desc">Neurobasal-based medium with weighed-in bulk salts for HEPES buffering (Neurobasal is HEPES-free). Simplest and most stable of the comparison set; 14-day shelf life.</div>
+      <div class="desc">Neurobasal + weighed-in HEPES/salts (Neurobasal is HEPES-free). Simplest of the comparison set; 14-day shelf.</div>
     </li>
     <li>
       <a href="/media/tings">Ting's Media (20 mL)</a>
-      <div class="desc">MEM Eagle + horse serum + insulin + fresh ascorbic acid. Shortest shelf life (3 days), matches feeding schedule. Lower incubator temp (35°C) and humidified.</div>
+      <div class="desc">MEM Eagle + horse serum + insulin + fresh ascorbic acid. 3-day shelf; 35°C humidified incubator.</div>
     </li>
     <li>
       <a href="/media/brainphys">BrainPhys (100 mL)</a>
-      <div class="desc">All-commercial STEMCELL formulation. Three liquids combined; no growth factors (by design, to avoid confounds in the media comparison). ~5–10 min total.</div>
+      <div class="desc">All-commercial STEMCELL formulation. Three liquids; no growth factors (comparison design). ~5–10 min.</div>
     </li>
   </ul>
 
