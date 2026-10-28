@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>OSCM — McGinnis Lab Protocols</title>
-<link rel="stylesheet" href="/assets/style.css?v=2">
+<link rel="stylesheet" href="/assets/style.css?v=3">
 </head>
 <body>
   <div class="breadcrumb">
@@ -24,10 +24,18 @@
     Add components in the order listed. The 300 mL initial water is a dissolving solvent; the final ~600 mL should be added in smaller portions, titrating to reach osmolarity 300–320 mOsm.
   </div>
 
-  <h2>Recipe</h2>
-  <table class="recipe">
+  <div class="recipe-header">
+    <h2>Recipe</h2>
+    <div class="controls">
+      <span class="progress" id="progress">0 of 40 checked</span>
+      <button id="reset-checklist" type="button">Reset checklist</button>
+    </div>
+  </div>
+
+  <table class="recipe" id="recipe-table" data-checklist-id="oscm-v1">
     <thead>
       <tr>
+        <th class="check"></th>
         <th class="num">#</th>
         <th>Component</th>
         <th>Final conc.</th>
@@ -36,49 +44,50 @@
       </tr>
     </thead>
     <tbody>
-      <tr><td class="num">1</td><td><span class="reagent" data-reagent="bme">BME</span></td><td class="conc">dilute to 15%</td><td class="vol-primary">150 mL</td><td></td></tr>
-      <tr><td class="num">2</td><td><span class="reagent" data-reagent="dmem-f12">DMEM/F12</span></td><td class="conc">dilute to 15%</td><td class="vol-primary">150 mL</td><td></td></tr>
-      <tr><td class="num">3</td><td><span class="reagent" data-reagent="water">H₂O</span> (initial)</td><td class="conc">—</td><td class="vol-primary">300 mL</td><td class="notes">Initial dissolving solvent</td></tr>
-      <tr><td class="num">4</td><td><span class="reagent" data-reagent="cacl2">CaCl₂</span></td><td class="conc">0.91 mM</td><td class="vol-primary">1 mL of 1000× aliquot</td><td></td></tr>
-      <tr><td class="num">5</td><td><span class="reagent" data-reagent="kcl">KCl</span></td><td class="conc">1.96 mM</td><td class="vol-primary">26.15 mL</td><td class="notes">Ready-made, not aliquoted</td></tr>
-      <tr><td class="num">6</td><td><span class="reagent" data-reagent="mgso4">MgSO₄</span></td><td class="conc">0.81 mM</td><td class="vol-primary">1 mL of 1000× aliquot</td><td></td></tr>
-      <tr><td class="num">7</td><td><span class="reagent" data-reagent="nacl">NaCl</span></td><td class="conc">81.90 mM</td><td class="vol-primary">16.40 mL</td><td></td></tr>
-      <tr><td class="num">8</td><td><span class="reagent" data-reagent="nah2po4">NaH₂PO₄</span></td><td class="conc">0.84 mM</td><td class="vol-primary">1 mL of 1000× aliquot</td><td></td></tr>
-      <tr><td class="num">9</td><td><span class="reagent" data-reagent="nahco3">NaHCO₃</span></td><td class="conc">14.00 mM</td><td class="vol-primary">4.00 mL</td><td></td></tr>
-      <tr><td class="num">10</td><td><span class="reagent" data-reagent="znso4">ZnSO₄</span></td><td class="conc">0.5 μM</td><td class="vol-primary">0.05 mL (50 μL)</td><td></td></tr>
-      <tr><td class="num">11</td><td><span class="reagent" data-reagent="cuso4">CuSO₄</span></td><td class="conc">0.01 μM</td><td class="vol-primary">1 mL of 1000× aliquot</td><td></td></tr>
-      <tr><td class="num">12</td><td><span class="reagent" data-reagent="d-glucose">D-Glucose</span></td><td class="conc">0.63 mM</td><td class="vol-primary">1 mL of 1000× aliquot</td><td></td></tr>
-      <tr><td class="num">13</td><td><span class="reagent" data-reagent="sodium-pyruvate">Sodium pyruvate</span></td><td class="conc">0.14 mM</td><td class="vol-primary">1.40 mL</td><td></td></tr>
-      <tr><td class="num">14</td><td><span class="reagent" data-reagent="ascorbic-acid">Ascorbic acid</span></td><td class="conc">0.58 mM</td><td class="vol-primary">1 mL of 1000× aliquot</td><td></td></tr>
-      <tr><td class="num">15</td><td><span class="reagent" data-reagent="oxalo-acetic-acid">Oxalo-acetic acid</span></td><td class="conc">1.00 mM</td><td class="vol-primary">1 mL of 1000× aliquot</td><td></td></tr>
-      <tr><td class="num">16</td><td><span class="reagent" data-reagent="sodium-lactate">Sodium lactate</span></td><td class="conc">4.00 mM</td><td class="vol-primary">4.00 mL</td><td></td></tr>
-      <tr><td class="num">17</td><td><span class="reagent" data-reagent="citric-acid">Citric acid</span></td><td class="conc">0.57 mM</td><td class="vol-primary">1 mL of 1000× aliquot</td><td></td></tr>
-      <tr><td class="num">18</td><td><span class="reagent" data-reagent="acetic-acid">Acetic acid</span></td><td class="conc">0.57 mM</td><td class="vol-primary">0.03 mL (30 μL)</td><td class="notes">Glacial, from benchtop</td></tr>
-      <tr><td class="num">19</td><td><span class="reagent" data-reagent="bsa">BSA</span></td><td class="conc">0.265%</td><td class="vol-primary">26.50 mL</td><td></td></tr>
-      <tr><td class="num">20</td><td><span class="reagent" data-reagent="17b-estradiol">17-β-Estradiol</span></td><td class="conc">0.001 μM</td><td class="vol-primary">1 mL of 1000× aliquot</td><td></td></tr>
-      <tr><td class="num">21</td><td><span class="reagent" data-reagent="a-tocopherol">α-Tocopherol</span></td><td class="conc">2.28 μM</td><td class="vol-primary">1 mL of 1000× aliquot</td><td></td></tr>
-      <tr><td class="num">22</td><td><span class="reagent" data-reagent="a-tocopherol-acetate">α-Tocopherol acetate</span></td><td class="conc">2.10 μM</td><td class="vol-primary">1 mL of 1000× aliquot</td><td></td></tr>
-      <tr><td class="num">23</td><td><span class="reagent" data-reagent="corticosterone">Corticosterone</span></td><td class="conc">0.06 μM</td><td class="vol-primary">1 mL of 1000× aliquot</td><td></td></tr>
-      <tr><td class="num">24</td><td><span class="reagent" data-reagent="creatine">Creatine</span></td><td class="conc">5.00 mM</td><td class="vol-primary">655 mg (powder)</td><td class="notes">Weigh direct; or 50 mL of 0.1 M stock</td></tr>
-      <tr><td class="num">25</td><td><span class="reagent" data-reagent="na-b-hydroxybutyrate">Sodium β-hydroxybutyrate</span></td><td class="conc">1.00 mM</td><td class="vol-primary">1 mL of 1000× aliquot</td><td></td></tr>
-      <tr><td class="num">26</td><td><span class="reagent" data-reagent="mannitol">Mannitol</span></td><td class="conc">5.00 mM</td><td class="vol-primary">10.00 mL</td><td></td></tr>
-      <tr><td class="num">27</td><td><span class="reagent" data-reagent="phosphate-creatine">Phosphate creatine</span></td><td class="conc">0.2 mM</td><td class="vol-primary">1 mL of 1000× aliquot</td><td></td></tr>
-      <tr><td class="num">28</td><td><span class="reagent" data-reagent="n2-supplement">N-2 supplement</span></td><td class="conc">0.5% (1×)</td><td class="vol-primary">5.00 mL</td><td class="notes">Ready-made, not aliquoted</td></tr>
-      <tr><td class="num">29</td><td><span class="reagent" data-reagent="atp">ATP</span></td><td class="conc">0.01 mM</td><td class="vol-primary">1 mL of 1000× aliquot</td><td></td></tr>
-      <tr><td class="num">30</td><td><span class="reagent" data-reagent="insulin">Insulin</span></td><td class="conc">0.41 μM</td><td class="vol-primary">0.60 mL</td><td class="notes">Ready-made, not aliquoted</td></tr>
-      <tr><td class="num">31</td><td><span class="reagent" data-reagent="t3">Tri-iodo-L-thyronine (T3)</span></td><td class="conc">0.0003 μM</td><td class="vol-primary">100 μL of 10,000× aliquot</td><td></td></tr>
-      <tr><td class="num">32</td><td><span class="reagent" data-reagent="sod">Superoxide dismutase</span></td><td class="conc">0.08 μM</td><td class="vol-primary">1 mL of 1000× aliquot</td><td></td></tr>
-      <tr><td class="num">33</td><td><span class="reagent" data-reagent="glycerol">Glycerol</span></td><td class="conc">0.05 mM</td><td class="vol-primary">0.50 mL</td><td></td></tr>
-      <tr><td class="num">34</td><td><span class="reagent" data-reagent="glutamax">GlutaMax</span></td><td class="conc">0.5 mM</td><td class="vol-primary">2.50 mL</td><td class="notes">Ready-made, not aliquoted</td></tr>
-      <tr><td class="num">35</td><td><span class="reagent" data-reagent="mncl2">MnCl₂</span></td><td class="conc">1.00 μM</td><td class="vol-primary">100 μL of 10,000× aliquot</td><td></td></tr>
-      <tr><td class="num">36</td><td><span class="reagent" data-reagent="gaba">γ-Amino-butyric acid (GABA)</span></td><td class="conc">1.00 μM</td><td class="vol-primary">100 μL of 10,000× aliquot</td><td></td></tr>
-      <tr><td class="num">37</td><td><span class="reagent" data-reagent="glutathione">Glutathione</span></td><td class="conc">3.00 μM</td><td class="vol-primary">100 μL of 10,000× aliquot</td><td></td></tr>
-      <tr><td class="num">38</td><td><span class="reagent" data-reagent="taurine">Taurine</span></td><td class="conc">8 μM</td><td class="vol-primary">80 μL of 10,000× aliquot</td><td></td></tr>
-      <tr><td class="num">39</td><td><span class="reagent" data-reagent="hepes">HEPES</span></td><td class="conc">5 mM</td><td class="vol-primary">1,191 mg (powder)</td><td class="notes">Weigh direct; or 5 mL of 1 M stock</td></tr>
-      <tr><td class="num">40</td><td><span class="reagent" data-reagent="water">H₂O</span> (final, titrated)</td><td class="conc">—</td><td class="vol-primary">~600 mL</td><td class="notes">Add in smaller portions; titrate to osm 300–320 mOsm</td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="1"></td><td class="num">1</td><td><span class="reagent" data-reagent="bme">BME</span></td><td class="conc">dilute to 15%</td><td class="vol-primary">150 mL</td><td></td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="2"></td><td class="num">2</td><td><span class="reagent" data-reagent="dmem-f12">DMEM/F12</span></td><td class="conc">dilute to 15%</td><td class="vol-primary">150 mL</td><td></td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="3"></td><td class="num">3</td><td><span class="reagent" data-reagent="water">H₂O</span> (initial)</td><td class="conc">—</td><td class="vol-primary">300 mL</td><td class="notes">Initial dissolving solvent</td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="4"></td><td class="num">4</td><td><span class="reagent" data-reagent="cacl2">CaCl₂</span></td><td class="conc">0.91 mM</td><td class="vol-primary">1 mL of 1000× aliquot</td><td></td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="5"></td><td class="num">5</td><td><span class="reagent" data-reagent="kcl">KCl</span></td><td class="conc">1.96 mM</td><td class="vol-primary">26.15 mL</td><td class="notes">Ready-made, not aliquoted</td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="6"></td><td class="num">6</td><td><span class="reagent" data-reagent="mgso4">MgSO₄</span></td><td class="conc">0.81 mM</td><td class="vol-primary">1 mL of 1000× aliquot</td><td></td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="7"></td><td class="num">7</td><td><span class="reagent" data-reagent="nacl">NaCl</span></td><td class="conc">81.90 mM</td><td class="vol-primary">16.40 mL</td><td></td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="8"></td><td class="num">8</td><td><span class="reagent" data-reagent="nah2po4">NaH₂PO₄</span></td><td class="conc">0.84 mM</td><td class="vol-primary">1 mL of 1000× aliquot</td><td></td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="9"></td><td class="num">9</td><td><span class="reagent" data-reagent="nahco3">NaHCO₃</span></td><td class="conc">14.00 mM</td><td class="vol-primary">4.00 mL</td><td></td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="10"></td><td class="num">10</td><td><span class="reagent" data-reagent="znso4">ZnSO₄</span></td><td class="conc">0.5 μM</td><td class="vol-primary">0.05 mL (50 μL)</td><td></td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="11"></td><td class="num">11</td><td><span class="reagent" data-reagent="cuso4">CuSO₄</span></td><td class="conc">0.01 μM</td><td class="vol-primary">1 mL of 1000× aliquot</td><td></td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="12"></td><td class="num">12</td><td><span class="reagent" data-reagent="d-glucose">D-Glucose</span></td><td class="conc">0.63 mM</td><td class="vol-primary">1 mL of 1000× aliquot</td><td></td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="13"></td><td class="num">13</td><td><span class="reagent" data-reagent="sodium-pyruvate">Sodium pyruvate</span></td><td class="conc">0.14 mM</td><td class="vol-primary">1.40 mL</td><td></td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="14"></td><td class="num">14</td><td><span class="reagent" data-reagent="ascorbic-acid">Ascorbic acid</span></td><td class="conc">0.58 mM</td><td class="vol-primary">1 mL of 1000× aliquot</td><td></td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="15"></td><td class="num">15</td><td><span class="reagent" data-reagent="oxalo-acetic-acid">Oxalo-acetic acid</span></td><td class="conc">1.00 mM</td><td class="vol-primary">1 mL of 1000× aliquot</td><td></td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="16"></td><td class="num">16</td><td><span class="reagent" data-reagent="sodium-lactate">Sodium lactate</span></td><td class="conc">4.00 mM</td><td class="vol-primary">4.00 mL</td><td></td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="17"></td><td class="num">17</td><td><span class="reagent" data-reagent="citric-acid">Citric acid</span></td><td class="conc">0.57 mM</td><td class="vol-primary">1 mL of 1000× aliquot</td><td></td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="18"></td><td class="num">18</td><td><span class="reagent" data-reagent="acetic-acid">Acetic acid</span></td><td class="conc">0.57 mM</td><td class="vol-primary">0.03 mL (30 μL)</td><td class="notes">Glacial, from benchtop</td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="19"></td><td class="num">19</td><td><span class="reagent" data-reagent="bsa">BSA</span></td><td class="conc">0.265%</td><td class="vol-primary">26.50 mL</td><td></td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="20"></td><td class="num">20</td><td><span class="reagent" data-reagent="17b-estradiol">17-β-Estradiol</span></td><td class="conc">0.001 μM</td><td class="vol-primary">1 mL of 1000× aliquot</td><td></td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="21"></td><td class="num">21</td><td><span class="reagent" data-reagent="a-tocopherol">α-Tocopherol</span></td><td class="conc">2.28 μM</td><td class="vol-primary">1 mL of 1000× aliquot</td><td></td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="22"></td><td class="num">22</td><td><span class="reagent" data-reagent="a-tocopherol-acetate">α-Tocopherol acetate</span></td><td class="conc">2.10 μM</td><td class="vol-primary">1 mL of 1000× aliquot</td><td></td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="23"></td><td class="num">23</td><td><span class="reagent" data-reagent="corticosterone">Corticosterone</span></td><td class="conc">0.06 μM</td><td class="vol-primary">1 mL of 1000× aliquot</td><td></td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="24"></td><td class="num">24</td><td><span class="reagent" data-reagent="creatine">Creatine</span></td><td class="conc">5.00 mM</td><td class="vol-primary">655 mg (powder)</td><td class="notes">Weigh direct; or 50 mL of 0.1 M stock</td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="25"></td><td class="num">25</td><td><span class="reagent" data-reagent="na-b-hydroxybutyrate">Sodium β-hydroxybutyrate</span></td><td class="conc">1.00 mM</td><td class="vol-primary">1 mL of 1000× aliquot</td><td></td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="26"></td><td class="num">26</td><td><span class="reagent" data-reagent="mannitol">Mannitol</span></td><td class="conc">5.00 mM</td><td class="vol-primary">10.00 mL</td><td></td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="27"></td><td class="num">27</td><td><span class="reagent" data-reagent="phosphate-creatine">Phosphate creatine</span></td><td class="conc">0.2 mM</td><td class="vol-primary">1 mL of 1000× aliquot</td><td></td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="28"></td><td class="num">28</td><td><span class="reagent" data-reagent="n2-supplement">N-2 supplement</span></td><td class="conc">0.5% (1×)</td><td class="vol-primary">5.00 mL</td><td class="notes">Ready-made, not aliquoted</td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="29"></td><td class="num">29</td><td><span class="reagent" data-reagent="atp">ATP</span></td><td class="conc">0.01 mM</td><td class="vol-primary">1 mL of 1000× aliquot</td><td></td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="30"></td><td class="num">30</td><td><span class="reagent" data-reagent="insulin">Insulin</span></td><td class="conc">0.41 μM</td><td class="vol-primary">0.60 mL</td><td class="notes">Ready-made, not aliquoted</td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="31"></td><td class="num">31</td><td><span class="reagent" data-reagent="t3">Tri-iodo-L-thyronine (T3)</span></td><td class="conc">0.0003 μM</td><td class="vol-primary">100 μL of 10,000× aliquot</td><td></td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="32"></td><td class="num">32</td><td><span class="reagent" data-reagent="sod">Superoxide dismutase</span></td><td class="conc">0.08 μM</td><td class="vol-primary">1 mL of 1000× aliquot</td><td></td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="33"></td><td class="num">33</td><td><span class="reagent" data-reagent="glycerol">Glycerol</span></td><td class="conc">0.05 mM</td><td class="vol-primary">0.50 mL</td><td></td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="34"></td><td class="num">34</td><td><span class="reagent" data-reagent="glutamax">GlutaMax</span></td><td class="conc">0.5 mM</td><td class="vol-primary">2.50 mL</td><td class="notes">Ready-made, not aliquoted</td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="35"></td><td class="num">35</td><td><span class="reagent" data-reagent="mncl2">MnCl₂</span></td><td class="conc">1.00 μM</td><td class="vol-primary">100 μL of 10,000× aliquot</td><td></td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="36"></td><td class="num">36</td><td><span class="reagent" data-reagent="gaba">γ-Amino-butyric acid (GABA)</span></td><td class="conc">1.00 μM</td><td class="vol-primary">100 μL of 10,000× aliquot</td><td></td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="37"></td><td class="num">37</td><td><span class="reagent" data-reagent="glutathione">Glutathione</span></td><td class="conc">3.00 μM</td><td class="vol-primary">100 μL of 10,000× aliquot</td><td></td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="38"></td><td class="num">38</td><td><span class="reagent" data-reagent="taurine">Taurine</span></td><td class="conc">8 μM</td><td class="vol-primary">80 μL of 10,000× aliquot</td><td></td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="39"></td><td class="num">39</td><td><span class="reagent" data-reagent="hepes">HEPES</span></td><td class="conc">5 mM</td><td class="vol-primary">1,191 mg (powder)</td><td class="notes">Weigh direct; or 5 mL of 1 M stock</td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="40"></td><td class="num">40</td><td><span class="reagent" data-reagent="water">H₂O</span> (final, titrated)</td><td class="conc">—</td><td class="vol-primary">~600 mL</td><td class="notes">Add in smaller portions; titrate to osm 300–320 mOsm</td></tr>
     </tbody>
     <tfoot>
       <tr>
+        <td></td>
         <td colspan="3" style="padding-top:12px;font-weight:600;text-align:right;">Final volume:</td>
         <td class="vol-primary" style="font-weight:700;">1,000 mL (1 L)</td>
         <td></td>
@@ -93,6 +102,7 @@
     <li><strong>Powder reagents</strong> (Creatine, HEPES): weigh directly for 1 L recipe rather than making a stock.</li>
     <li><strong>Removed from original recipe:</strong> Heparin (Sigma H3149) — struck out; not included.</li>
     <li><strong>Scale:</strong> published Nature Protocols recipe is for 100 mL; this page shows the 1 L version.</li>
+    <li><strong>Checklist:</strong> checkbox state is saved in your browser only (localStorage), per-device. Won't sync between people. Refresh-safe. Hit "Reset checklist" when you start a fresh prep.</li>
   </ul>
 
   <h2>Source</h2>
@@ -107,5 +117,6 @@
   </footer>
 
   <script src="/assets/reagents.js"></script>
+  <script src="/assets/checklist.js?v=1"></script>
 </body>
 </html>

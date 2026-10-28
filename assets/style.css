@@ -109,6 +109,44 @@ table.recipe td {
   vertical-align: top;
 }
 table.recipe tr:hover td { background: #fafbfc; }
+table.recipe td.check { width: 36px; text-align: center; padding: 8px 0; }
+table.recipe input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #1e6b36;
+  margin: 0;
+}
+table.recipe tr.done td { background: #f0f8f3 !important; opacity: 0.55; }
+table.recipe tr.done td:not(.check) { color: var(--muted); }
+table.recipe tr.done td.check { opacity: 1; }
+.recipe-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  margin: 32px 0 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+}
+.recipe-header h2 { margin: 0; border: none; padding: 0; }
+.recipe-header .progress {
+  font-size: 12px;
+  color: var(--muted);
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+}
+.recipe-header button {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 11px;
+  color: var(--muted);
+  font-family: inherit;
+}
+.recipe-header button:hover { background: var(--highlight-bg); color: var(--fg); }
+.recipe-header .controls { display: flex; align-items: center; gap: 12px; }
 table.recipe .num { color: var(--muted); font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 12px; width: 32px; }
 table.recipe .vol-primary { font-weight: 600; background: var(--highlight-bg); font-family: ui-monospace, "SF Mono", Menlo, monospace; }
 table.recipe .vol-secondary { color: var(--muted); font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 12px; }
