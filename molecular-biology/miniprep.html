@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Miniprep (centrifuge) — McGinnis Lab Protocols</title>
+<link rel="stylesheet" href="/assets/style.css?v=3">
+</head>
+<body>
+  <div class="breadcrumb">
+    <a href="/">Protocols</a> &nbsp;·&nbsp; Molecular Biology &nbsp;·&nbsp; Miniprep
+  </div>
+
+  <h1>Miniprep plasmid isolation protocol <span class="scale">(centrifuge)</span></h1>
+  <div class="sub">Follow this procedure to purify plasmid DNA using a centrifuge. Use a microcentrifuge capable of centrifuging at &gt;12,000 × <em>g</em>. For processing a large number of samples simultaneously, see the "Miniprep plasmid isolation protocol (vacuum)".</div>
+
+  <div class="callout">
+    <ul style="margin: 0 0 0 20px; padding: 0;">
+      <li>Perform all centrifugation steps at <strong>room temperature</strong> using a microcentrifuge.</li>
+      <li><strong>Optional:</strong> Preheat an aliquot of TE Buffer (TE) to 65–70°C for eluting DNA. Heating is optional for eluting 1–30 kb plasmid DNA but is recommended for eluting DNA &gt;30 kb.</li>
+      <li>Ensure the bag containing the PureLink™ Quick Spin Columns is closed tightly after each use.</li>
+      <li><strong>Caution:</strong> Buffers contain hazardous reagents. Use caution when handling buffers.</li>
+    </ul>
+  </div>
+
+  <div class="recipe-header">
+    <h2>Procedure</h2>
+    <div class="controls">
+      <span class="progress" id="progress">0 of 0 checked</span>
+      <button id="reset-checklist" type="button">Reset checklist</button>
+    </div>
+  </div>
+
+  <table class="recipe" data-checklist-id="miniprep-v1">
+    <thead>
+      <tr><th class="check"></th><th class="num">Step</th><th>Name</th><th>Procedure Details</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="check"><input type="checkbox" data-row="1"></td>
+        <td class="num">1</td>
+        <td><strong>Harvest</strong></td>
+        <td>Centrifuge 1–5 mL of the overnight LB-culture. (Use 1–2 ×10⁹ <em>E. coli</em> cells for each sample.) Remove all medium.</td>
+      </tr>
+      <tr>
+        <td class="check"><input type="checkbox" data-row="2"></td>
+        <td class="num">2</td>
+        <td><strong>Resuspend</strong></td>
+        <td>Add 250 μL Resuspension Buffer (R3) with RNase A to the cell pellet and resuspend the pellet until it is homogeneous.</td>
+      </tr>
+      <tr>
+        <td class="check"><input type="checkbox" data-row="3"></td>
+        <td class="num">3</td>
+        <td><strong>Lyse</strong></td>
+        <td>Add 250 μL Lysis Buffer (L7). Mix gently by inverting the capped tube until the mixture is homogeneous. Do not vortex. Incubate the tube at room temperature for 5 minutes.</td>
+      </tr>
+      <tr>
+        <td class="check"><input type="checkbox" data-row="4"></td>
+        <td class="num">4</td>
+        <td><strong>Precipitate</strong></td>
+        <td>Add 350 μL Precipitation Buffer (N4). Mix immediately by inverting the tube, or for large pellets, vigorously shaking the tube, until the mixture is homogeneous. Do not vortex. Centrifuge the lysate at &gt;12,000 × <em>g</em> for 10 minutes.</td>
+      </tr>
+      <tr>
+        <td class="check"><input type="checkbox" data-row="5"></td>
+        <td class="num">5</td>
+        <td><strong>Bind</strong></td>
+        <td>Load the supernatant from step 4 onto a spin column in a 2-mL wash tube. Centrifuge the column at 12,000 × <em>g</em> for 1 minute. Discard the flowthrough and place the column back into the wash tube.</td>
+      </tr>
+      <tr>
+        <td class="check"><input type="checkbox" data-row="6"></td>
+        <td class="num">6</td>
+        <td><strong>Wash</strong><br><span style="color:var(--muted);font-weight:400;font-size:11px;">(Optional)</span></td>
+        <td>(Recommended for endA+ strains). Add 500 μL Wash Buffer (W10) with ethanol to the column. Incubate the column for 1 minute at room temperature. Centrifuge the column at 12,000 × <em>g</em> for 1 minute. Discard the flowthrough and place column back into the wash tube.</td>
+      </tr>
+      <tr>
+        <td class="check"><input type="checkbox" data-row="7"></td>
+        <td class="num">7</td>
+        <td><strong>Wash and Remove Ethanol</strong></td>
+        <td>Add 700 μL Wash Buffer (W9) with ethanol to the column. Centrifuge the column at 12,000 × <em>g</em> for 1 minute. Discard the flowthrough and place the column into the wash tube. Centrifuge the column at 12,000 × <em>g</em> for 1 minute. Discard the wash tube with the flowthrough.</td>
+      </tr>
+      <tr>
+        <td class="check"><input type="checkbox" data-row="8"></td>
+        <td class="num">8</td>
+        <td><strong>Elute</strong></td>
+        <td>Place the Spin Column in a clean 1.5-mL elution tube. Add 75 μL of preheated TE Buffer (TE) to the center of the column. Incubate the column for 1 minute at room temperature.</td>
+      </tr>
+      <tr>
+        <td class="check"><input type="checkbox" data-row="9"></td>
+        <td class="num">9</td>
+        <td><strong>Recover</strong></td>
+        <td>Centrifuge the column at 12,000 × <em>g</em> for 2 minutes. The elution tube contains the purified plasmid DNA. Discard the column. Store plasmid DNA at 4°C (short term) or store the DNA in aliquots at −20°C (long term).</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Source</h2>
+  <p style="font-size:13px;line-height:1.6;">
+    Transcribed verbatim from the Invitrogen <strong>PureLink™ Quick Plasmid Miniprep Kit</strong> manual (centrifuge protocol).
+  </p>
+
+  <footer>
+    <a href="https://mcginnislab.org">mcginnislab.org</a>
+    &nbsp;·&nbsp;
+    <a href="/">protocols</a>
+  </footer>
+
+  <script src="/assets/reagents.js"></script>
+  <script src="/assets/checklist.js?v=2"></script>
+</body>
+</html>
