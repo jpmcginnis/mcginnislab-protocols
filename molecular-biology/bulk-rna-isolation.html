@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bulk RNA Isolation — McGinnis Lab Protocols</title>
+<link rel="stylesheet" href="/assets/style.css?v=3">
+<style>
+  .section-h { font-size: 15px; font-weight: 600; margin: 22px 0 8px; color: var(--fg); }
+  .substep-h { font-size: 13px; font-weight: 600; margin: 16px 0 6px; color: var(--fg); text-transform: uppercase; letter-spacing: 0.06em; }
+  .qc-table { margin: 8px 0 16px; font-size: 13px; }
+  .qc-table th { background: #f6f8fa; }
+  .trouble { font-size: 13px; line-height: 1.6; }
+  .trouble li { margin-bottom: 6px; }
+</style>
+</head>
+<body>
+  <div class="breadcrumb">
+    <a href="/">Protocols</a> &nbsp;·&nbsp; Molecular Biology &nbsp;·&nbsp; Bulk RNA Isolation
+  </div>
+
+  <h1>Bulk RNA Isolation <span class="scale">— human brain tissue</span></h1>
+  <div class="sub">TRIzol / Direct-zol (Zymo) workflow with baked Dounce homogenizer. Target RIN &gt; 7 for most archived tissue; 8+ for fresh surgical.</div>
+
+  <div class="callout">
+    <strong>Preparation matters more than extraction:</strong> most low-RIN failures trace to a warm Dounce or RNase contamination, not the column cleanup. Bake Dounces (Route A) between tissue categories; use the fast RNaseZap-only wash (Route B) only within a same-day same-category batch.
+  </div>
+
+  <h2 class="section-h">Preparation — Dounce cleaning protocol</h2>
+  <p style="font-size:13px;color:var(--muted);">Separate vessel and pestle; keep matched pairs together. Full detergent + bake protocol (Route A) ensures RNase destruction; fast between-sample cleaning (Route B) is same-day same-category only.</p>
+
+  <div class="recipe-header">
+    <h3 class="section-h" style="margin:0;">Route A — Full clean (between tissue categories)</h3>
+    <div class="controls">
+      <span class="progress" id="progress">0 of 0 checked</span>
+      <button id="reset-checklist" type="button">Reset checklist</button>
+    </div>
+  </div>
+
+  <div class="step-section" data-checklist-id="bulk-rna-isolation-v1">
+
+    <h4 class="substep-h">Step 1 — Detergent wash (removes organic residue)</h4>
+    <table class="recipe">
+      <thead><tr><th class="check"></th><th class="num">#</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr><td class="check"><input type="checkbox" data-row="1"></td><td class="num">1a</td><td>Rinse vessel and pestle under warm tap water to remove loose debris.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="2"></td><td class="num">1b</td><td>Submerge in <strong>1–2% Alconox in warm DI water</strong>. Scrub interior of vessel with dedicated test tube brush; scrub pestle shaft + grinding surface with lint-free wipe or soft brush.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="3"></td><td class="num">1c</td><td>Soak 15–30 min for old/idle Dounces to loosen any residue.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="4"></td><td class="num">1d</td><td>Rinse thoroughly with copious DI water — at least 10 volumes. Any detergent residue inhibits downstream enzymes.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="5"></td><td class="num">1e</td><td>Final rinse with nuclease-free water.</td></tr>
+      </tbody>
+    </table>
+
+    <h4 class="substep-h">Step 2 — Dry</h4>
+    <table class="recipe">
+      <thead><tr><th class="check"></th><th class="num">#</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr><td class="check"><input type="checkbox" data-row="6"></td><td class="num">2a</td><td>Rinse with 100% ethanol to displace water and speed drying.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="7"></td><td class="num">2b</td><td>Air-dry inverted on a clean surface, or drying oven at 60°C for 30 min.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="8"></td><td class="num">2c</td><td>Fully dry before baking — water pockets can cause thermal stress cracks.</td></tr>
+      </tbody>
+    </table>
+
+    <h4 class="substep-h">Step 3 — Bake (destroys RNases)</h4>
+    <table class="recipe">
+      <thead><tr><th class="check"></th><th class="num">#</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr><td class="check"><input type="checkbox" data-row="9"></td><td class="num">3a</td><td>Wrap vessel and pestle <strong>separately</strong> in heavy-duty aluminum foil. Fold edges tightly to keep sterile post-bake.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="10"></td><td class="num">3b</td><td>Place in <strong>dry-heat oven at 240°C for 4 hours</strong> (or 250°C for 2 hours).</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="11"></td><td class="num">3c</td><td>Cool to room temperature <strong>inside the oven</strong> with foil intact. Do not unwrap until ready to use.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="12"></td><td class="num">3d</td><td><em>If no bake-capable oven available:</em> proceed to Step 4 (RNaseZap) as chemical-only alternative. Second-best but workable.</td></tr>
+      </tbody>
+    </table>
+
+    <h4 class="substep-h">Step 4 — RNaseZap treatment (if not baking, or belt-and-suspenders)</h4>
+    <table class="recipe">
+      <thead><tr><th class="check"></th><th class="num">#</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr><td class="check"><input type="checkbox" data-row="13"></td><td class="num">4a</td><td>Fill vessel with <strong>RNaseZap</strong>. Submerge pestle fully. Leave 10 min.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="14"></td><td class="num">4b</td><td>Rinse 3× with copious DEPC-treated or nuclease-free water. RNaseZap residue interferes with downstream.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="15"></td><td class="num">4c</td><td>Rinse with 100% ethanol; air-dry inverted on foil in a covered container.</td></tr>
+      </tbody>
+    </table>
+
+    <h4 class="substep-h">Step 5 — Chill and use</h4>
+    <table class="recipe">
+      <thead><tr><th class="check"></th><th class="num">#</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr><td class="check"><input type="checkbox" data-row="16"></td><td class="num">5a</td><td>Pre-chill assembled Dounce on ice for at least 10 min before RNA work.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="17"></td><td class="num">5b</td><td>Handle by the top only. If touched with bare skin, redo Step 4.</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="section-h">Route B — Fast Between-Sample Cleaning (same-day batch, same category only)</h3>
+    <table class="recipe">
+      <thead><tr><th class="check"></th><th class="num">#</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr><td class="check"><input type="checkbox" data-row="18"></td><td class="num">B1</td><td>Rinse vessel and pestle with DI water to remove TRIzol and tissue debris.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="19"></td><td class="num">B2</td><td>Fill vessel with RNaseZap, submerge pestle, agitate for 30 sec.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="20"></td><td class="num">B3</td><td>Rinse 3× with DEPC-treated or nuclease-free water.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="21"></td><td class="num">B4</td><td>Rinse with 100% ethanol.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="22"></td><td class="num">B5</td><td>Air-dry briefly (or wipe pestle shaft with lint-free wipe), re-chill on ice, proceed.</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:12px;color:var(--muted);"><strong>Do NOT use Route B between different tissue categories</strong> (e.g., tumor → normal cortex, or patient A → patient B for downstream comparison). Either dedicate a Dounce per specimen or run Route A.</p>
+
+    <h2 class="section-h">Bulk RNA isolation protocol</h2>
+
+    <h4 class="substep-h">Step 1 — Sample preparation</h4>
+    <table class="recipe">
+      <thead><tr><th class="check"></th><th class="num">#</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr><td class="check"><input type="checkbox" data-row="23"></td><td class="num">1a</td><td>Start with <strong>20–50 mg tissue</strong>. Larger pieces overwhelm the extraction and drop yield/quality.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="24"></td><td class="num">1b</td><td>Keep sample frozen until lysis. Every thaw-refreeze cycle costs RIN.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="25"></td><td class="num">1c</td><td>Rinse in cold PBS before homogenization.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="26"></td><td class="num">1d</td><td>Chill both pestles on ice.</td></tr>
+      </tbody>
+    </table>
+
+    <h4 class="substep-h">Step 2 — Dounce Homogenization</h4>
+    <table class="recipe">
+      <thead><tr><th class="check"></th><th class="num">#</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr><td class="check"><input type="checkbox" data-row="27"></td><td class="num">2a</td><td>Place tissue into 2 mL Dounce with <strong>1 mL cold TRIzol</strong> (or QIAzol). Keep Dounce on ice throughout.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="28"></td><td class="num">2b</td><td><strong>Loose pestle (A):</strong> 10–15 slow full strokes. Rotate pestle slightly on each stroke. Do not pump.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="29"></td><td class="num">2c</td><td><strong>Tight pestle (B):</strong> 10–15 strokes. Resistance drops as tissue disperses.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="30"></td><td class="num">2d</td><td>For <strong>dense GBM stroma or gliotic scar:</strong> 20+ tight strokes. Suspension should look uniformly cloudy with no visible fragments.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="31"></td><td class="num">2e</td><td>Transfer to 1.5 mL tube. If visible chunks remain: pass through 21G needle 3–4×, or spin 2,000 × <em>g</em> for 2 min and take supernatant.</td></tr>
+      </tbody>
+    </table>
+
+    <h4 class="substep-h">Step 3 — Phase Separation</h4>
+    <table class="recipe">
+      <thead><tr><th class="check"></th><th class="num">#</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr><td class="check"><input type="checkbox" data-row="32"></td><td class="num">3a</td><td>Incubate 5 min at room temperature.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="33"></td><td class="num">3b</td><td>Add <strong>200 μL chloroform</strong>. Shake vigorously by hand for 15 sec (do not vortex).</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="34"></td><td class="num">3c</td><td>Incubate 3 min at room temperature.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="35"></td><td class="num">3d</td><td>Centrifuge <strong>12,000 × <em>g</em>, 15 min, 4°C</strong>.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="36"></td><td class="num">3e</td><td>Transfer <strong>only the top ~60%</strong> of the clear aqueous phase to a new tube. Stay well above the interphase.</td></tr>
+      </tbody>
+    </table>
+
+    <h4 class="substep-h">Step 4 — Column Cleanup (Direct-zol)</h4>
+    <table class="recipe">
+      <thead><tr><th class="check"></th><th class="num">#</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr><td class="check"><input type="checkbox" data-row="37"></td><td class="num">4a</td><td>Add an equal volume of 100% ethanol to the aqueous phase. Mix by pipetting.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="38"></td><td class="num">4b</td><td>Load onto Direct-zol column (in collection tube). Spin per kit (typically 30 sec, 12,000 × <em>g</em>). Discard flow-through.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="39"></td><td class="num">4c</td><td><strong>On-column DNase I treatment</strong> (per Zymo): <strong>5 μL DNase I + 75 μL DNA Digestion Buffer</strong>. Apply to column, incubate <strong>15 min RT</strong>.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="40"></td><td class="num">4d</td><td>Wash: Direct-zol Pre-Wash (2× per kit), then RNA Wash Buffer.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="41"></td><td class="num">4e</td><td>Dry column: spin empty at max speed for 1–2 min to remove residual ethanol. Critical for downstream apps.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="42"></td><td class="num">4f</td><td>Elute in <strong>30–50 μL nuclease-free water</strong>. For max yield, apply eluate back to column and spin once more.</td></tr>
+      </tbody>
+    </table>
+
+    <h4 class="substep-h">Step 5 — QC</h4>
+    <table class="recipe">
+      <thead><tr><th class="check"></th><th class="num">#</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr><td class="check"><input type="checkbox" data-row="43"></td><td class="num">5a</td><td>Measure <strong>A260/A280</strong> (target ≥1.9) and <strong>A260/A230</strong> (target ≥1.8) on NanoDrop.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="44"></td><td class="num">5b</td><td>Bioanalyzer or TapeStation for RIN before any library prep.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="45"></td><td class="num">5c</td><td>Aliquot before freezing at −80°C. Avoid freeze-thaw cycles.</td></tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <h2 class="section-h">Expected RIN by specimen type</h2>
+  <table class="recipe qc-table">
+    <thead><tr><th>Specimen type</th><th>Expected RIN</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td>Fresh surgical</td><td class="vol-primary">8.0 – 9.5</td><td>Achievable with careful technique</td></tr>
+      <tr><td>Snap-frozen (well-preserved)</td><td class="vol-primary">7.0 – 8.5</td><td>Typical for archived biobank tissue</td></tr>
+      <tr><td>Snap-frozen (older archive)</td><td class="vol-primary">6.0 – 8.0</td><td>Depends on freezer excursions</td></tr>
+      <tr><td>Slice culture (fresh/frozen)</td><td class="vol-primary">8.0 – 9.0</td><td>Thin tissue dounces easily; high yield</td></tr>
+      <tr><td>Post-mortem</td><td class="vol-primary">4.0 – 7.0</td><td>Highly PMI-dependent</td></tr>
+      <tr><td>FFPE</td><td class="vol-primary">— use different kit —</td><td>RNeasy FFPE / miRNeasy FFPE</td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="section-h">Troubleshooting — Dounce cleaning</h2>
+  <ul class="trouble">
+    <li><strong>Cloudy or filmy residue after drying:</strong> Detergent not fully rinsed. Redo Step 1 with more DI water volumes.</li>
+    <li><strong>Glass fogging or micro-cracks after baking:</strong> Residual water at bake start, or oven cooled too fast. Let cool inside oven next time.</li>
+    <li><strong>Low RIN despite clean protocol:</strong> Check that Dounce was cold at start of homogenization and that stroke pace didn't warm it. Cleaning is one variable; heat is the more common culprit.</li>
+    <li><strong>Pestle sticks in vessel:</strong> Match check — swapped pestle. Or grinding surfaces damaged. Retire.</li>
+    <li><strong>Old grease/oil on ground-glass surfaces of vintage Dounces:</strong> Extended acetone soak (10 min in fume hood) before detergent wash. Then full Route A.</li>
+    <li><strong>No dry-heat oven access:</strong> Route A Steps 1–2 then Step 4 (RNaseZap only) is acceptable. Skip Step 3. Won't get the same guarantee but works for most bulk RNA applications.</li>
+  </ul>
+
+  <h2 class="section-h">Troubleshooting — Extraction</h2>
+  <ul class="trouble">
+    <li><strong>Low RIN unexpectedly:</strong> Dounce warming up during work. Re-chill and reduce stroke pace. Check that TRIzol was cold at start.</li>
+    <li><strong>Lipid layer that won't disperse:</strong> More tight-pestle strokes. Common with white matter.</li>
+    <li><strong>Low A260/A230:</strong> Residual guanidine or ethanol. Extend the dry spin; re-elute.</li>
+    <li><strong>Low yield:</strong> Tissue input too small, or too much aqueous phase left behind. Do not overcorrect by taking phase closer to interphase.</li>
+    <li><strong>gDNA contamination on qPCR:</strong> On-column DNase step skipped or too short. Repeat with fresh DNase and full 15-min incubation.</li>
+    <li><strong>Cross-contamination between samples:</strong> Dedicate Dounces per specimen or wash rigorously (RNaseZap → DEPC water → ice).</li>
+  </ul>
+
+  <p style="font-size:12px;color:var(--muted);font-style:italic;margin-top:24px;">Personal reference protocol. Verify oven temperature calibration before relying on dry-heat sterilization. Verify DNase incubation times and column steps against current Zymo Direct-zol kit insert.</p>
+
+  <footer>
+    <a href="https://mcginnislab.org">mcginnislab.org</a>
+    &nbsp;·&nbsp;
+    <a href="/">protocols</a>
+  </footer>
+
+  <script src="/assets/reagents.js"></script>
+  <script src="/assets/checklist.js?v=2"></script>
+</body>
+</html>
