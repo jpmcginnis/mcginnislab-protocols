@@ -6,10 +6,12 @@
 //   - a #reset-checklist button that clears state (if present)
 
 (function () {
-  const table = document.querySelector("table[data-checklist-id]");
-  if (!table) return;
-  const id = "checklist:" + table.dataset.checklistId;
-  const boxes = Array.from(table.querySelectorAll('input[type="checkbox"][data-row]'));
+  // Scope: any element with data-checklist-id (table or wrapper div).
+  // Multiple-table protocols put the attribute on a wrapper so all step tables share state.
+  const container = document.querySelector("[data-checklist-id]");
+  if (!container) return;
+  const id = "checklist:" + container.dataset.checklistId;
+  const boxes = Array.from(container.querySelectorAll('input[type="checkbox"][data-row]'));
   const progressEl = document.getElementById("progress");
   const resetBtn = document.getElementById("reset-checklist");
 

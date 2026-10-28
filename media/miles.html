@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Miles Media — McGinnis Lab Protocols</title>
+<link rel="stylesheet" href="/assets/style.css?v=3">
+<style>
+  .step-section h3 {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 24px 0 8px;
+    color: var(--fg);
+  }
+  .step-section h3 .step-time {
+    font-weight: 400;
+    color: var(--muted);
+    font-size: 12px;
+    margin-left: 8px;
+  }
+  .prereq {
+    padding: 16px 20px;
+    background: #f6f8fa;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 13px;
+    line-height: 1.55;
+    margin-top: 12px;
+  }
+  .prereq h4 {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    margin: 14px 0 4px;
+  }
+  .prereq h4:first-child { margin-top: 0; }
+  .prereq ul { margin: 4px 0 10px 20px; padding: 0; }
+  .prereq li { margin: 2px 0; }
+</style>
+</head>
+<body>
+  <div class="breadcrumb">
+    <a href="/">Protocols</a> &nbsp;·&nbsp; Media Formulations &nbsp;·&nbsp; Miles Media
+  </div>
+
+  <h1>Miles Media <span class="scale">— 100 mL batch</span></h1>
+  <div class="sub">Defined serum-free medium for organotypic slice culture. Make fresh weekly; shorter shelf life than OSCM but tighter composition control.</div>
+
+  <div class="specs">
+    <div class="spec-item"><span class="spec-label">pH</span><span class="spec-value">7.2–7.4</span></div>
+    <div class="spec-item"><span class="spec-label">Shelf life</span><span class="spec-value">7 days at 4°C</span></div>
+    <div class="spec-item"><span class="spec-label">Make fresh</span><span class="spec-value">Weekly</span></div>
+    <div class="spec-item"><span class="spec-label">Incubator</span><span class="spec-value">37°C / 5% CO₂</span></div>
+  </div>
+
+  <div class="callout">
+    Finished batch is filtered 0.22 μm PES, then equilibrated in CO₂ incubator ≥30 min before slice plating. Oxaloacetate must be used within 15 min of dissolving.
+  </div>
+
+  <h2>Prerequisite stocks</h2>
+  <div class="sub" style="margin-bottom:8px;">Made once, used across many batches. Reference only — not part of per-batch checklist below.</div>
+
+  <div class="prereq">
+    <h4>7 combined stocks (100 μL aliquots at −20°C)</h4>
+    <ul>
+      <li><span class="reagent" data-reagent="miles-stable-aa">Stable amino acid mix</span> — water, 30 mL total prep</li>
+      <li><span class="reagent" data-reagent="miles-steroid-vit">Steroid + fat-soluble vitamin mix</span> — 100% ethanol, 30 mL, amber</li>
+      <li><span class="reagent" data-reagent="miles-stable-water-vit">Stable water-soluble vitamin mix</span> — water, 4.5 mL (myo-inositol limited)</li>
+      <li><span class="reagent" data-reagent="miles-trace-metals">Trace metals mix</span> — acidified water pH 3, 30 mL (excludes CuSO₄)</li>
+      <li><span class="reagent" data-reagent="miles-photolabile-b">Photolabile B-vitamin mix</span> — 0.01 N NaOH, 30 mL, amber</li>
+      <li><span class="reagent" data-reagent="miles-alkaline-aa">Alkaline amino acid mix</span> — 0.1 N NaOH, 30 mL</li>
+      <li><span class="reagent" data-reagent="miles-mg-phos-citrate">Mg / phosphate / citrate mix</span> — water, 30 mL</li>
+    </ul>
+
+    <h4>Individual 1000× aqueous stocks (100 μL each at −20°C)</h4>
+    <ul>
+      <li><span class="reagent" data-reagent="atp">ATP</span>, <span class="reagent" data-reagent="phosphate-creatine">Phosphocreatine</span>, <span class="reagent" data-reagent="sod">SOD</span>, <span class="reagent" data-reagent="glycerol">Glycerol</span>, <span class="reagent" data-reagent="sodium-lactate">Na-lactate</span>, <span class="reagent" data-reagent="na-b-hydroxybutyrate">Na-β-hydroxybutyrate</span>, <span class="reagent" data-reagent="putrescine">Putrescine</span>, <span class="reagent" data-reagent="thymidine">Thymidine</span>, <span class="reagent" data-reagent="t3">T3</span></li>
+      <li style="color:var(--muted);"><em>Heparin was listed in Miles's original but struck out in this lab's version — excluded here (9 stocks total instead of 10).</em></li>
+    </ul>
+
+    <h4>Bulk protein stocks (−20°C)</h4>
+    <ul>
+      <li><span class="reagent" data-reagent="bsa-25">BSA</span> 25% w/v — thaw 1.06 mL per batch</li>
+      <li><span class="reagent" data-reagent="transferrin">Transferrin</span> 5 mg/mL — 100 μL per batch (corrected from Miles's transcription error)</li>
+    </ul>
+
+    <h4>Insulin working stock</h4>
+    <ul><li><span class="reagent" data-reagent="insulin">Insulin</span> — use OSCM stocks</li></ul>
+
+    <h4>Shared Park OSCM stocks (1000×)</h4>
+    <ul>
+      <li><span class="reagent" data-reagent="corticosterone">Corticosterone</span> — 1000× ethanol</li>
+      <li><span class="reagent" data-reagent="a-tocopherol">α-Tocopherol</span> — 1000× ethanol</li>
+      <li><span class="reagent" data-reagent="17b-estradiol">17β-Estradiol</span> — 1000× ethanol</li>
+      <li><span class="reagent" data-reagent="cuso4">CuSO₄</span> — 1000× aqueous</li>
+    </ul>
+  </div>
+
+  <div class="recipe-header">
+    <h2>Batch protocol</h2>
+    <div class="controls">
+      <span class="progress" id="progress">0 of 0 checked</span>
+      <button id="reset-checklist" type="button">Reset checklist</button>
+    </div>
+  </div>
+
+  <div class="step-section" data-checklist-id="miles-v1">
+
+    <h3>Step 1 <span class="step-time">— Base water + bulk salts (~15 min)</span></h3>
+    <table class="recipe">
+      <thead><tr><th class="check"></th><th class="num">#</th><th>Action</th><th>Amount</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td class="check"><input type="checkbox" data-row="1"></td><td class="num">1</td><td>Add <span class="reagent" data-reagent="milli-q">Milli-Q water</span> to 250 mL beaker with stir bar</td><td class="vol-primary">~65 mL</td><td></td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="2"></td><td class="num">2</td><td>Weigh <span class="reagent" data-reagent="nacl">NaCl</span> into base</td><td class="vol-primary">683 mg</td><td></td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="3"></td><td class="num">3</td><td>Weigh <span class="reagent" data-reagent="kcl">KCl</span></td><td class="vol-primary">24.6 mg</td><td></td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="4"></td><td class="num">4</td><td>Weigh <span class="reagent" data-reagent="d-glucose">D-Glucose</span></td><td class="vol-primary">73.9 mg</td><td></td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="5"></td><td class="num">5</td><td>Weigh <span class="reagent" data-reagent="mannitol">Mannitol</span></td><td class="vol-primary">91.1 mg</td><td></td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="6"></td><td class="num">6</td><td>Weigh <span class="reagent" data-reagent="creatine">Creatine</span></td><td class="vol-primary">65.6 mg</td><td></td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="7"></td><td class="num">7</td><td>Weigh <span class="reagent" data-reagent="nahco3">NaHCO₃</span></td><td class="vol-primary">187 mg</td><td></td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="8"></td><td class="num">8</td><td>Separately dissolve <span class="reagent" data-reagent="cacl2-dihydrate">CaCl₂·2H₂O</span> in ~5 mL water</td><td class="vol-primary">14.4 mg</td><td class="notes">Set aside for Step 7</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Step 2 <span class="step-time">— Add 7 combined stocks (100 μL each = 700 μL total)</span></h3>
+    <table class="recipe">
+      <thead><tr><th class="check"></th><th class="num">#</th><th>Component</th><th>Amount</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td class="check"><input type="checkbox" data-row="9"></td><td class="num">9</td><td><span class="reagent" data-reagent="miles-stable-aa">Stable amino acid mix</span></td><td class="vol-primary">100 μL</td><td></td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="10"></td><td class="num">10</td><td><span class="reagent" data-reagent="miles-steroid-vit">Steroid + fat-soluble vitamin mix</span></td><td class="vol-primary">100 μL</td><td class="notes">Amber tube</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="11"></td><td class="num">11</td><td><span class="reagent" data-reagent="miles-stable-water-vit">Stable water-soluble vitamin mix</span></td><td class="vol-primary">100 μL</td><td></td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="12"></td><td class="num">12</td><td><span class="reagent" data-reagent="miles-trace-metals">Trace metals mix</span></td><td class="vol-primary">100 μL</td><td></td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="13"></td><td class="num">13</td><td><span class="reagent" data-reagent="miles-photolabile-b">Photolabile B-vitamin mix</span></td><td class="vol-primary">100 μL</td><td class="notes">Amber tube</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="14"></td><td class="num">14</td><td><span class="reagent" data-reagent="miles-alkaline-aa">Alkaline amino acid mix</span></td><td class="vol-primary">100 μL</td><td></td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="15"></td><td class="num">15</td><td><span class="reagent" data-reagent="miles-mg-phos-citrate">Mg / phosphate / citrate mix</span></td><td class="vol-primary">100 μL</td><td></td></tr>
+      </tbody>
+    </table>
+
+    <h3>Step 3 <span class="step-time">— Add 9 individual 1000× stocks + glacial acetic (~903 μL total)</span></h3>
+    <table class="recipe">
+      <thead><tr><th class="check"></th><th class="num">#</th><th>Component</th><th>Amount</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td class="check"><input type="checkbox" data-row="16"></td><td class="num">16</td><td><span class="reagent" data-reagent="atp">ATP</span></td><td class="vol-primary">100 μL</td><td></td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="17"></td><td class="num">17</td><td><span class="reagent" data-reagent="phosphate-creatine">Phosphocreatine</span></td><td class="vol-primary">100 μL</td><td></td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="18"></td><td class="num">18</td><td><span class="reagent" data-reagent="sod">SOD</span></td><td class="vol-primary">100 μL</td><td></td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="19"></td><td class="num">19</td><td><span class="reagent" data-reagent="glycerol">Glycerol</span></td><td class="vol-primary">100 μL</td><td></td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="20"></td><td class="num">20</td><td><span class="reagent" data-reagent="sodium-lactate">Na-lactate</span></td><td class="vol-primary">100 μL</td><td></td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="21"></td><td class="num">21</td><td><span class="reagent" data-reagent="na-b-hydroxybutyrate">Na-β-hydroxybutyrate</span></td><td class="vol-primary">100 μL</td><td></td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="22"></td><td class="num">22</td><td><span class="reagent" data-reagent="putrescine">Putrescine</span></td><td class="vol-primary">100 μL</td><td></td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="23"></td><td class="num">23</td><td><span class="reagent" data-reagent="thymidine">Thymidine</span></td><td class="vol-primary">100 μL</td><td></td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="24"></td><td class="num">24</td><td><span class="reagent" data-reagent="t3">T3</span></td><td class="vol-primary">100 μL</td><td></td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="25"></td><td class="num">25</td><td>Pipette <span class="reagent" data-reagent="acetic-acid">glacial acetic acid</span></td><td class="vol-primary">3.3 μL</td><td class="notes">Fume hood</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Step 4 <span class="step-time">— Bulk protein / hormone stocks</span></h3>
+    <table class="recipe">
+      <thead><tr><th class="check"></th><th class="num">#</th><th>Component</th><th>Amount</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td class="check"><input type="checkbox" data-row="26"></td><td class="num">26</td><td><span class="reagent" data-reagent="bsa-25">BSA</span> (25% w/v)</td><td class="vol-primary">1.06 mL</td><td></td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="27"></td><td class="num">27</td><td><span class="reagent" data-reagent="transferrin">Transferrin</span></td><td class="vol-primary">100 μL</td><td></td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="28"></td><td class="num">28</td><td><span class="reagent" data-reagent="insulin">Insulin</span> (OSCM stock)</td><td class="vol-primary">~15 μL</td><td></td></tr>
+      </tbody>
+    </table>
+
+    <h3>Step 5 <span class="step-time">— Add Park OSCM stocks (380 μL total)</span></h3>
+    <table class="recipe">
+      <thead><tr><th class="check"></th><th class="num">#</th><th>Component</th><th>Amount</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td class="check"><input type="checkbox" data-row="29"></td><td class="num">29</td><td><span class="reagent" data-reagent="corticosterone">Corticosterone</span></td><td class="vol-primary">100 μL</td><td></td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="30"></td><td class="num">30</td><td><span class="reagent" data-reagent="a-tocopherol">α-Tocopherol</span></td><td class="vol-primary">100 μL</td><td></td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="31"></td><td class="num">31</td><td><span class="reagent" data-reagent="17b-estradiol">17β-Estradiol</span></td><td class="vol-primary">80 μL</td><td></td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="32"></td><td class="num">32</td><td><span class="reagent" data-reagent="cuso4">CuSO₄</span></td><td class="vol-primary">100 μL</td><td></td></tr>
+      </tbody>
+    </table>
+
+    <h3>Step 6 <span class="step-time">— Fresh-only reagents (~10 min; weigh → dissolve in 1 mL water → pipette to batch immediately)</span></h3>
+    <table class="recipe">
+      <thead><tr><th class="check"></th><th class="num">#</th><th>Reagent</th><th>Weigh</th><th>Add to batch</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td class="check"><input type="checkbox" data-row="33"></td><td class="num">33</td><td><span class="reagent" data-reagent="l-cysteine">L-Cysteine</span></td><td class="conc">10 mg</td><td class="vol-primary">26 μL</td><td class="notes">Chemicals room</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="34"></td><td class="num">34</td><td><span class="reagent" data-reagent="l-ascorbic-acid">L-Ascorbic acid</span></td><td class="conc">100 mg</td><td class="vol-primary">102 μL</td><td></td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="35"></td><td class="num">35</td><td><span class="reagent" data-reagent="gsh">GSH</span></td><td class="conc">10 mg</td><td class="vol-primary">10 μL</td><td></td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="36"></td><td class="num">36</td><td><span class="reagent" data-reagent="sodium-pyruvate">Sodium pyruvate</span></td><td class="conc">10 mg</td><td class="vol-primary">237 μL</td><td></td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="37"></td><td class="num">37</td><td><span class="reagent" data-reagent="oxaloacetate">Oxaloacetate</span></td><td class="conc">50 mg</td><td class="vol-primary">264 μL</td><td class="notes">Cold water; use within 15 min; stored −20°C</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="38"></td><td class="num">38</td><td><span class="reagent" data-reagent="l-glutamine">L-Glutamine</span></td><td class="conc">10 mg</td><td class="vol-primary">12 μL</td><td></td></tr>
+      </tbody>
+    </table>
+
+    <h3>Step 7 <span class="step-time">— Add pre-dissolved CaCl₂ from Step 1</span></h3>
+    <table class="recipe">
+      <thead><tr><th class="check"></th><th class="num">#</th><th>Action</th><th></th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td class="check"><input type="checkbox" data-row="39"></td><td class="num">39</td><td>Add pre-dissolved <span class="reagent" data-reagent="cacl2-dihydrate">CaCl₂·2H₂O</span> solution</td><td class="vol-primary">~5 mL</td><td class="notes">Slowly, with vigorous stirring</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Step 8 <span class="step-time">— Finish</span></h3>
+    <table class="recipe">
+      <thead><tr><th class="check"></th><th class="num">#</th><th>Action</th><th>Target</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td class="check"><input type="checkbox" data-row="40"></td><td class="num">40</td><td>Bring to final volume with <span class="reagent" data-reagent="milli-q">Milli-Q water</span></td><td class="vol-primary">100 mL</td><td></td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="41"></td><td class="num">41</td><td>Adjust pH</td><td class="vol-primary">7.2–7.4</td><td></td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="42"></td><td class="num">42</td><td>Filter</td><td class="vol-primary">0.22 μm PES</td><td></td></tr>
+      </tbody>
+    </table>
+
+    <h3>Step 9 <span class="step-time">— Equilibrate</span></h3>
+    <table class="recipe">
+      <thead><tr><th class="check"></th><th class="num">#</th><th>Action</th><th>Time</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td class="check"><input type="checkbox" data-row="43"></td><td class="num">43</td><td>Equilibrate in CO₂ incubator before slice plating</td><td class="vol-primary">≥30 min</td><td class="notes">37°C / 5% CO₂</td></tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <h2>Notes</h2>
+  <ul style="font-size:13px;color:var(--muted);line-height:1.6;">
+    <li><strong>Heparin discrepancy:</strong> Miles's original Step 3 said "10 individual small stocks = 1.0 mL" but Heparin was struck out of the stock list in this lab's annotation. Current protocol uses 9 stocks = 900 μL. If the full 10 should be restored, flag it.</li>
+    <li><strong>Transferrin volume:</strong> page 1 of the source note says "corrected from Miles's transcription error" — 100 μL per 100 mL batch is the corrected value used here.</li>
+    <li><strong>Oxaloacetate:</strong> dissolve in COLD water and use within 15 min. Highly unstable in solution.</li>
+    <li><strong>Insulin:</strong> uses OSCM's working stock — don't make a separate aliquot for Miles.</li>
+    <li><strong>Checklist:</strong> state saved in your browser only (localStorage), per-device. Refresh-safe. Hit "Reset checklist" when starting a fresh batch.</li>
+  </ul>
+
+  <h2>Source</h2>
+  <p style="font-size:13px;line-height:1.6;">
+    Lab-internal protocol developed by Miles (name TBD; add citation if published). Combined with Park OSCM stocks where noted (see <a href="/media/oscm">OSCM protocol</a> for those stock details).
+  </p>
+
+  <footer>
+    <a href="https://mcginnislab.org">mcginnislab.org</a>
+    &nbsp;·&nbsp;
+    <a href="/">protocols</a>
+    &nbsp;·&nbsp;
+    <a href="/media/oscm">OSCM</a>
+  </footer>
+
+  <script src="/assets/reagents.js"></script>
+  <script src="/assets/checklist.js?v=2"></script>
+</body>
+</html>

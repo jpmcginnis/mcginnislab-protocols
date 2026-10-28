@@ -37,5 +37,29 @@
   "gaba": { "name": "γ-Amino-butyric acid (GABA)", "vendor": "Alomone", "catalog": "G-110", "storage": "-20°C freezer", "form": "10,000× aliquot (made from 10 mM stock in water)", "location": "TBD" },
   "glutathione": { "name": "Glutathione", "vendor": "Sigma", "catalog": "G6013", "storage": "-20°C freezer", "form": "10,000× aliquot (made from 30 mM stock in water)", "location": "TBD" },
   "taurine": { "name": "Taurine", "vendor": "Sigma", "catalog": "T8691", "storage": "-20°C freezer", "form": "10,000× aliquot (made from 0.1 M stock in water)", "location": "TBD" },
-  "hepes": { "name": "HEPES", "vendor": "Thermo Fisher", "catalog": "15630-080", "storage": "Powder — weigh out fresh", "form": "Powder (weigh direct at 1L scale, or make 1 M stock in water)", "location": "TBD" }
+  "hepes": { "name": "HEPES", "vendor": "Thermo Fisher", "catalog": "15630-080", "storage": "Powder — weigh out fresh", "form": "Powder (weigh direct at 1L scale, or make 1 M stock in water)", "location": "TBD" },
+
+  "milli-q": { "name": "Milli-Q water", "vendor": "In-lab Milli-Q system", "catalog": "—", "storage": "Benchtop (fresh daily)", "form": "Ultrapure 18.2 MΩ·cm water", "location": "TBD" },
+
+  "cacl2-dihydrate": { "name": "CaCl₂·2H₂O", "vendor": "Sigma", "catalog": "C3881", "storage": "Benchtop (room temp)", "form": "Powder (dissolve 14.4 mg in ~5 mL water per batch)", "location": "TBD" },
+
+  "miles-stable-aa": { "name": "Stable amino acid mix", "vendor": "In-lab combined stock", "catalog": "—", "storage": "-20°C freezer, 100 μL aliquots", "form": "Combined stock in water (30 mL total prep)", "location": "TBD" },
+  "miles-steroid-vit": { "name": "Steroid + fat-soluble vitamin mix", "vendor": "In-lab combined stock", "catalog": "—", "storage": "-20°C freezer, 100 μL aliquots, amber tube", "form": "Combined stock in 100% ethanol (30 mL total prep)", "location": "TBD" },
+  "miles-stable-water-vit": { "name": "Stable water-soluble vitamin mix", "vendor": "In-lab combined stock", "catalog": "—", "storage": "-20°C freezer, 100 μL aliquots", "form": "Combined stock in water (4.5 mL total prep; myo-inositol limited)", "location": "TBD" },
+  "miles-trace-metals": { "name": "Trace metals mix", "vendor": "In-lab combined stock", "catalog": "—", "storage": "-20°C freezer, 100 μL aliquots", "form": "Combined stock in acidified water pH 3 (30 mL total; excludes CuSO₄)", "location": "TBD" },
+  "miles-photolabile-b": { "name": "Photolabile B-vitamin mix", "vendor": "In-lab combined stock", "catalog": "—", "storage": "-20°C freezer, 100 μL aliquots, amber tube", "form": "Combined stock in 0.01 N NaOH (30 mL total prep)", "location": "TBD" },
+  "miles-alkaline-aa": { "name": "Alkaline amino acid mix", "vendor": "In-lab combined stock", "catalog": "—", "storage": "-20°C freezer, 100 μL aliquots", "form": "Combined stock in 0.1 N NaOH (30 mL total prep)", "location": "TBD" },
+  "miles-mg-phos-citrate": { "name": "Mg / phosphate / citrate mix", "vendor": "In-lab combined stock", "catalog": "—", "storage": "-20°C freezer, 100 μL aliquots", "form": "Combined stock in water (30 mL total prep)", "location": "TBD" },
+
+  "putrescine": { "name": "Putrescine", "vendor": "Sigma", "catalog": "P5780", "storage": "-20°C freezer", "form": "1000× aqueous aliquot (100 μL)", "location": "TBD" },
+  "thymidine": { "name": "Thymidine", "vendor": "Sigma", "catalog": "T1895", "storage": "-20°C freezer", "form": "1000× aqueous aliquot (100 μL)", "location": "TBD" },
+
+  "transferrin": { "name": "Transferrin (holo-)", "vendor": "Sigma", "catalog": "T0665", "storage": "-20°C freezer", "form": "5 mg/mL working stock", "location": "TBD" },
+  "bsa-25": { "name": "BSA 25% w/v", "vendor": "Sigma", "catalog": "A1595 (reconstituted) or A3059", "storage": "-20°C freezer", "form": "25% w/v stock (thaw 1.06 mL per 100 mL batch)", "location": "TBD" },
+
+  "l-cysteine": { "name": "L-Cysteine", "vendor": "Sigma", "catalog": "C7352", "storage": "Chemicals room (powder)", "form": "Powder (weigh 10 mg fresh per batch, dissolve in 1 mL water)", "location": "Chemicals room" },
+  "l-ascorbic-acid": { "name": "L-Ascorbic acid", "vendor": "Sigma", "catalog": "A5960", "storage": "Powder shelf (room temp)", "form": "Powder (weigh 100 mg fresh per batch, dissolve in 1 mL water)", "location": "TBD" },
+  "gsh": { "name": "Glutathione, reduced (GSH)", "vendor": "Sigma", "catalog": "G4251", "storage": "4°C fridge or room temp (per vendor)", "form": "Powder (weigh 10 mg fresh per batch, dissolve in 1 mL water)", "location": "TBD" },
+  "oxaloacetate": { "name": "Oxaloacetate", "vendor": "Sigma", "catalog": "O4126", "storage": "-20°C freezer", "form": "Powder (weigh 50 mg fresh per batch, dissolve in cold water, use within 15 min)", "location": "TBD" },
+  "l-glutamine": { "name": "L-Glutamine", "vendor": "Sigma", "catalog": "G8540", "storage": "Powder shelf (room temp)", "form": "Powder (weigh 10 mg fresh per batch, dissolve in 1 mL water)", "location": "TBD" }
 }
