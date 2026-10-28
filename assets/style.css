@@ -52,6 +52,35 @@ h1 .scale {
   margin: 16px 0;
 }
 .callout strong { font-weight: 600; }
+.specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 12px 16px;
+  background: #f6f8fa;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 13px;
+  margin: 16px 0;
+}
+.specs .spec-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.specs .spec-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  font-weight: 600;
+}
+.specs .spec-value {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--fg);
+}
 h2 {
   font-size: 15px;
   font-weight: 600;
