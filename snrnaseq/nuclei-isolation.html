@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nuclei Isolation (snRNA-seq) — McGinnis Lab Protocols</title>
+<link rel="stylesheet" href="/assets/style.css?v=3">
+<style>
+  .section-h { font-size: 15px; font-weight: 600; margin: 22px 0 8px; color: var(--fg); }
+  .substep-h { font-size: 13px; font-weight: 600; margin: 16px 0 6px; color: var(--fg); text-transform: uppercase; letter-spacing: 0.06em; }
+  .hw {
+    background: #fff3cd;
+    color: #664d03;
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-weight: 600;
+    font-style: normal;
+  }
+  .hw-block {
+    background: #fff8dc;
+    border-left: 3px solid #e0b84c;
+    padding: 10px 14px;
+    margin: 10px 0;
+    font-size: 13px;
+    color: #4a3a10;
+  }
+  .hw-block strong { color: #2a2000; }
+  .draft-banner {
+    background: #e0ecff;
+    border: 1px solid #a8c3f0;
+    color: #1b3a7a;
+    padding: 10px 14px;
+    border-radius: 4px;
+    font-size: 13px;
+    margin: 16px 0;
+  }
+  .mat-list {
+    background: #f6f8fa;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 12px 20px;
+    font-size: 13px;
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    line-height: 1.8;
+  }
+</style>
+</head>
+<body>
+  <div class="breadcrumb">
+    <a href="/">Protocols</a> &nbsp;·&nbsp; Single-Nucleus RNA Sequencing &nbsp;·&nbsp; Nuclei Isolation
+  </div>
+
+  <h1>Nuclei Isolation <span class="scale">— Miltenyi Nuclei Extraction Buffer + gentleMACS, at FACS core</span></h1>
+  <div class="sub">First step of the snRNA-seq pipeline. Based on Miltenyi Biotec Nuclei Extraction Buffer manual (order no. 130-128-024). Lab adaptations in <span class="hw">yellow</span> throughout.</div>
+
+  <div class="draft-banner">
+    <strong>DRAFT</strong> — this page is a first-pass transcription of the Miltenyi manual with handwritten lab notes highlighted. Expect to edit extensively (step order, volumes, lab-specific tweaks, strainer colors, which steps happen at FACS core vs. in-lab, etc.).
+  </div>
+
+  <h2 class="section-h">Overview</h2>
+  <ul style="font-size:13px;line-height:1.6;">
+    <li><strong>Buffer:</strong> Miltenyi Nuclei Extraction Buffer (<em>aka lysis buffer</em>; <span class="hw">= 4°C, bottom of fridge</span>). <span class="hw">For different tissues: 2 mL for 400 mg temp lobe (do 9 nuclei density)</span>.</li>
+    <li><strong>Equipment:</strong> gentleMACS Octo Dissociator; program <strong>4C_nuclei_1</strong> <span class="hw">(Miltenyi 4C_nuclei_1 OK to start)</span>.</li>
+    <li><strong>Strainers:</strong> 70 μm (purple) for standard brain, 100 μm for mouse brain, 30 μm (yellow) for post-resuspension filter.</li>
+    <li><strong>Resuspension buffer:</strong> <span class="hw">cold PBS</span> (not the Miltenyi resuspension buffer).</li>
+    <li><strong>Location:</strong> performed at the <span class="hw">FACS core</span>.</li>
+  </ul>
+
+  <h2 class="section-h">Take with you to FACS core (handwritten list)</h2>
+  <div class="mat-list">
+    1× Nuclei Extraction Buffer<br>
+    1× Cooler <span class="hw">(don't have — may need to order?)</span><br>
+    1× gentleMACS C Tube<br>
+    1 ea 30, 70, 100 μm SmartStrainers<br>
+    4× 15 mL tubes<br>
+    1× 1 mL pipette + tips<br>
+    Resuspension buffer = cold PBS
+  </div>
+
+  <h2 class="section-h">Reagents &amp; equipment</h2>
+  <ul style="font-size:13px;line-height:1.6;">
+    <li><strong>Nuclei Extraction Buffer</strong> — Miltenyi 130-128-024 (100 mL / 25 extractions; 2–8°C, do not freeze)</li>
+    <li><strong>MACS SmartStrainers 70 μm</strong> — Miltenyi 130-098-462</li>
+    <li><strong>MACS SmartStrainers 30 μm</strong> — Miltenyi 130-098-458</li>
+    <li><strong>MACS SmartStrainers 100 μm</strong> (brain) — Miltenyi 130-098-463</li>
+    <li><strong>gentleMACS Octo Dissociator</strong> — Miltenyi 130-095-937 (or with Heaters: 130-096-427)</li>
+    <li><strong>gentleMACS C Tubes</strong> — Miltenyi 130-093-237 or 130-096-334</li>
+    <li><strong>RNase inhibitor</strong> — e.g. murine RNase Inhibitor from NEB</li>
+    <li>(Optional) Eppendorf LoBind 5 mL tubes</li>
+    <li>For nuclei staining (optional): 7-AAD (130-111-568), DAPI (130-111-570), or DRAQ5 (130-117-343)</li>
+  </ul>
+
+  <div class="recipe-header">
+    <h2 class="section-h" style="margin:0;">Procedure</h2>
+    <div class="controls">
+      <span class="progress" id="progress">0 of 0 checked</span>
+      <button id="reset-checklist" type="button">Reset checklist</button>
+    </div>
+  </div>
+
+  <div class="step-section" data-checklist-id="snrnaseq-nuclei-v1">
+
+    <h3 class="section-h">2.1 Sample, equipment, and reagent preparation</h3>
+    <table class="recipe">
+      <thead><tr><th class="check"></th><th class="num">#</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr><td class="check"><input type="checkbox" data-row="1"></td><td class="num">1</td><td>Pre-cool centrifuge, buffers, and consumables with sample contact (e.g. gentleMACS C Tube and SmartStrainers) at 4°C. <em>Recommended: pre-cool the C Tube containing prepared lysis buffer overnight at 4°C. Ideally perform all nuclei extraction steps in a cold room.</em></td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="2"></td><td class="num">2</td><td><strong>Preparation of lysis buffer</strong> <span class="hw">(aka nuclei extraction buffer; = 4°C, bottom of fridge)</span>: per extraction, add RNase inhibitor (final conc 0.2 U/μL) to pre-cooled 4 mL Nuclei Extraction Buffer.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="3"></td><td class="num">3</td><td><strong>Preparation of resuspension buffer:</strong> use nuclei separation buffer (e.g. for Anti-Nucleus MicroBeads 130-132-997). <span class="hw">Lab uses cold PBS instead.</span>
+          <br>Per-extraction volumes recommended:
+          <ul style="margin:4px 0 0 20px;">
+            <li>up to 50 mg tissue → 1.5 mL</li>
+            <li>50–100 mg → 3 mL</li>
+            <li>100–200 mg → 6 mL</li>
+            <li>Mouse brain hemisphere → 8 mL</li>
+          </ul>
+        </td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="4"></td><td class="num">4</td><td><strong>Preparation of tissue sample:</strong> resect tissue, cut into pieces of up to 200 mg. Freeze on dry ice or in LN₂. <em>Cut before freezing; if frozen pieces are &gt;200 mg, cut without thawing.</em></td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="section-h">2.2 Nuclei extraction protocol</h3>
+    <p style="font-size:12px;color:var(--muted);"><strong>Work fast until tissue is dissociated; keep samples on ice at all steps.</strong> Volumes below are for up to 200 mg tissue per extraction.</p>
+
+    <div class="hw-block">
+      <strong>Lab adjustments (handwritten, bottom of page):</strong>
+      <ol style="margin: 4px 0 0 20px;">
+        <li>Reduce volume per 2-2-2.</li>
+        <li>Mortar + pestle with LOW volume of extraction buffer. Transfer to C Tube. Use MORE extraction buffer to rinse the mortar + pestle.</li>
+      </ol>
+    </div>
+
+    <table class="recipe">
+      <thead><tr><th class="check"></th><th class="num">#</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr><td class="check"><input type="checkbox" data-row="5"></td><td class="num">1</td><td>Add 2 mL ice-cold lysis buffer to each pre-cooled gentleMACS C Tube. <span class="hw">Don't add all lysis buffer to sample until you get to FACS core.</span></td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="6"></td><td class="num">2</td><td>Transfer tissue pieces to the gentleMACS C Tube containing lysis buffer and directly proceed with the following steps until samples are dissociated. <em>Do not let frozen sample thaw before dissociation — endogenous RNase might degrade RNA.</em></td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="7"></td><td class="num">3</td><td>Close gentleMACS C Tube and place it on the gentleMACS Dissociator. <em>Close tightly beyond the first resistance.</em></td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="8"></td><td class="num">4</td><td>Run gentleMACS Program <strong>4C_nuclei_1</strong> on the gentleMACS Dissociator. <span class="hw">Miltenyi 4C_nuclei_1 OK start.</span></td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="9"></td><td class="num">5</td><td>After termination of the program, detach C Tube from the gentleMACS Dissociator and place the C Tube immediately on ice. <em>Depending on tissue type, additional 5–10 min incubation on ice after dissociation might be needed to optimize cell lysis. Over-lysis causes aggregation/damage.</em></td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="10"></td><td class="num">6</td><td>Apply nuclei suspension to a MACS SmartStrainer (70 μm, <span class="hw">purple</span>; <span class="hw">pre-coat with BSA 1:2</span>) placed on a 15 mL tube. <em>For brain samples, use 100 μm.</em> <em>For increased nuclei recovery, use low-binding tubes.</em> <span class="hw">Go up to single-cell core.</span></td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="11"></td><td class="num">7</td><td>Wash MACS SmartStrainer with 2 mL ice-cold lysis buffer. <em>Alternatively for max cell recovery, rinse used C Tube with ice-cold lysis buffer before adding to the SmartStrainer.</em></td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="12"></td><td class="num">8</td><td>Discard MACS SmartStrainer and centrifuge nuclei suspension at <strong>300 × <em>g</em>, 4°C, 5 min</strong>. Carefully aspirate supernatant completely. <span class="hw">Centrifuge at 10k core.</span></td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="13"></td><td class="num">9</td><td>Resuspend nuclei pellet with <span class="hw">ice-cold PBS, 1 mL</span> by slowly and gently pipetting the sample up and down ~10 times. <span class="hw">Then resuspend again.</span></td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="14"></td><td class="num">10</td><td>Apply nuclei suspension to a MACS SmartStrainer (30 μm, <span class="hw">yellow</span>; <span class="hw">pre-coat with BSA</span>) placed on a 15 mL tube. <em>For myelin-rich brain, a myelin removal step is strongly recommended.</em></td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="15"></td><td class="num">11</td><td>Collect nuclei suspension and proceed immediately with downstream applications (snRNA-seq or nuclei sorting). <em>If debris amount still too high, purify the suspension using a cell sorter (e.g. MACSQuant Tyto).</em></td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="section-h">2.3 (Optional) Labeling for microscopic or flow cytometric analysis</h3>
+    <table class="recipe">
+      <thead><tr><th class="check"></th><th class="num">#</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr><td class="check"><input type="checkbox" data-row="16"></td><td class="num">1</td><td>Add 7-AAD (0.525 μg/mL final) OR DAPI (0.25 μg/mL final) OR DRAQ5 (10 μM final) staining solution to a small fraction of the nuclei suspension. Mix by inverting gently.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="17"></td><td class="num">2</td><td>Incubate 5 min at 4°C.</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="18"></td><td class="num">3</td><td>Load sample on hemocytometer or flow cytometer (e.g. MACSQuant Analyzer).</td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="19"></td><td class="num">4</td><td>Analyze sample according to manufacturer's recommendation.</td></tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <h2 class="section-h">Key handwritten notes consolidated</h2>
+  <div class="hw-block">
+    <ul style="margin: 0 0 0 18px;">
+      <li>Buffer vol scaling: <strong>2 mL extraction buffer for 400 mg temporal lobe</strong> (do 9 nuclei density per tissue).</li>
+      <li>Lysis buffer stored at <strong>4°C, bottom of fridge</strong>.</li>
+      <li>Don't add all lysis buffer to sample until arriving at FACS core.</li>
+      <li>gentleMACS program <strong>4C_nuclei_1</strong> is the right starting program.</li>
+      <li>Strainers: <strong>70 μm = purple</strong>, <strong>30 μm = yellow</strong>; pre-coat with BSA (1:2 on the 70 μm, plain BSA on the 30 μm).</li>
+      <li>Centrifuge at the 10k core; "go up to single-cell core" for the 70 μm strainer step.</li>
+      <li>Resuspend in <strong>ice-cold PBS, 1 mL</strong> instead of the Miltenyi resuspension buffer. Then resuspend again.</li>
+      <li>Lab adjustments summary: (1) reduce volume per 2-2-2; (2) mortar + pestle with LOW volume of extraction buffer, transfer to C Tube, then use more buffer to rinse the mortar + pestle.</li>
+      <li>Cooler may need to be ordered — not currently in lab supply.</li>
+    </ul>
+  </div>
+
+  <h2 class="section-h">Source</h2>
+  <p style="font-size:13px;line-height:1.6;">
+    Miltenyi Biotec <em>Nuclei Extraction Buffer</em> data sheet, order no. <strong>130-128-024</strong>. Full manual: <a href="https://www.miltenyibiotec.com/US-en/products/nuclei-extraction-buffer.html">Miltenyi 130-128-024</a>. © 2023 Miltenyi Biotec. Lab adaptations above represent McGinnis Lab usage at the FACS core.
+  </p>
+
+  <footer>
+    <a href="https://mcginnislab.org">mcginnislab.org</a>
+    &nbsp;·&nbsp;
+    <a href="/">protocols</a>
+  </footer>
+
+  <script src="/assets/reagents.js"></script>
+  <script src="/assets/checklist.js?v=2"></script>
+</body>
+</html>
