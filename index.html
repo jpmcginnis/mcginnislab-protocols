@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>McGinnis Lab Protocols</title>
+<style>
+  :root {
+    --fg: #1b1b1b;
+    --muted: #6b6b6b;
+    --bg: #ffffff;
+    --border: #e2e2e2;
+    --accent: #2a6df4;
+    --warn-bg: #fff3cd;
+    --warn-fg: #664d03;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    color: var(--fg);
+    background: var(--bg);
+    line-height: 1.5;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 24px 96px;
+  }
+  h1 {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0 0 6px 0;
+  }
+  .sub {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 36px;
+  }
+  h2 {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 32px 0 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+  }
+  ul.protocols {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  ul.protocols li {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  ul.protocols li:last-child { border-bottom: none; }
+  ul.protocols a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+  }
+  ul.protocols a:hover { text-decoration: underline; }
+  ul.protocols .desc {
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 4px;
+  }
+  ul.protocols .meta {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 4px;
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  }
+  .placeholder {
+    padding: 24px;
+    background: #f6f8fa;
+    border: 1px dashed var(--border);
+    border-radius: 6px;
+    color: var(--muted);
+    font-size: 13px;
+    text-align: center;
+  }
+  .notice {
+    display: inline-block;
+    padding: 2px 8px;
+    background: var(--warn-bg);
+    color: var(--warn-fg);
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  footer {
+    margin-top: 48px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 12px;
+  }
+  footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+  <h1>McGinnis Lab — Protocols</h1>
+  <div class="sub">Living protocols for lab work. Hover any reagent in a protocol to see vendor, catalog #, and freezer location.</div>
+
+  <h2>Protocols</h2>
+  <div class="placeholder">
+    <span class="notice">In progress</span>
+    <div style="margin-top: 8px;">Protocols are being transcribed from paper notes and added here. First batch coming soon.</div>
+  </div>
+
+  <footer>
+    <a href="https://mcginnislab.org">mcginnislab.org</a>
+    &nbsp;·&nbsp;
+    <a href="https://data.mcginnislab.org">data.mcginnislab.org</a>
+  </footer>
+</body>
+</html>
