@@ -61,5 +61,18 @@
   "l-ascorbic-acid": { "name": "L-Ascorbic acid", "vendor": "Sigma", "catalog": "A5960", "storage": "Powder shelf (room temp)", "form": "Powder (weigh 100 mg fresh per batch, dissolve in 1 mL water)", "location": "TBD" },
   "gsh": { "name": "Glutathione, reduced (GSH)", "vendor": "Sigma", "catalog": "G4251", "storage": "4°C fridge or room temp (per vendor)", "form": "Powder (weigh 10 mg fresh per batch, dissolve in 1 mL water)", "location": "TBD" },
   "oxaloacetate": { "name": "Oxaloacetate", "vendor": "Sigma", "catalog": "O4126", "storage": "-20°C freezer", "form": "Powder (weigh 50 mg fresh per batch, dissolve in cold water, use within 15 min)", "location": "TBD" },
-  "l-glutamine": { "name": "L-Glutamine", "vendor": "Sigma", "catalog": "G8540", "storage": "Powder shelf (room temp)", "form": "Powder (weigh 10 mg fresh per batch, dissolve in 1 mL water)", "location": "TBD" }
+  "l-glutamine": { "name": "L-Glutamine", "vendor": "Sigma", "catalog": "G8540", "storage": "Powder shelf (room temp)", "form": "Powder (weigh 10 mg fresh per batch, dissolve in 1 mL water)", "location": "TBD" },
+
+  "neurobasal": { "name": "Neurobasal medium", "vendor": "Gibco", "catalog": "21103049", "storage": "4°C (fridge)", "form": "Ready-made liquid base; HEPES-free", "location": "TBD" },
+  "b27-supplement": { "name": "B-27 supplement", "vendor": "Gibco", "catalog": "17504044", "storage": "-20°C freezer (behind bench, Media Comparison Box)", "form": "50× liquid; thaw and aliquot. Variant lock: must be 17504044 for consistency.", "location": "Media Comparison Box, −20° behind bench" },
+  "ab-am": { "name": "Antibiotic / antimycotic (AB/AM)", "vendor": "Gibco", "catalog": "15240-062", "storage": "-20°C freezer", "form": "100× liquid; penicillin + streptomycin + amphotericin B. Replaces Pen-Strep in Adam's.", "location": "TBD" },
+  "mgso4-7h2o": { "name": "MgSO₄·7H₂O (magnesium sulfate heptahydrate)", "vendor": "Sigma", "catalog": "M1880 or M2773", "storage": "Powder shelf (room temp)", "form": "Powder (weigh fresh per batch)", "location": "TBD" },
+
+  "mem-eagle": { "name": "MEM Eagle liquid (1×, Earle's salts, +L-glutamine)", "vendor": "Gibco", "catalog": "11095-098", "storage": "4°C (fridge)", "form": "Ready-made liquid base; built-in Earle's salts + ~2 mM L-glutamine + ~26 mM NaHCO₃ + ~1.8 mM CaCl₂", "location": "TBD" },
+  "horse-serum": { "name": "Horse serum, heat-inactivated", "vendor": "Gibco or equivalent", "catalog": "26050-088", "storage": "-20°C freezer, pre-aliquoted in 4 mL portions", "form": "Heat-inactivate 56°C × 30 min once, aliquot. Thaw gently; don't vortex.", "location": "TBD" },
+  "insulin-working": { "name": "Insulin working stock (1 mg/mL)", "vendor": "Diluted from vendor stock", "catalog": "see insulin (Invitrogen 12585-014)", "storage": "-20°C freezer", "form": "1 mg/mL diluted from Invitrogen 12585-014 stock", "location": "TBD" },
+
+  "brainphys-medium": { "name": "BrainPhys Neuronal Medium", "vendor": "STEMCELL Technologies", "catalog": "05790", "storage": "4°C (fridge); refrigerated only, NOT frozen", "form": "Ready-made liquid base", "location": "TBD" },
+  "sm1-supplement": { "name": "NeuroCult SM1 Neuronal Supplement", "vendor": "STEMCELL Technologies", "catalog": "05711", "storage": "-20°C freezer (behind bench, Culture Media Comparison Box); aliquot into 2 mL portions after first thaw", "form": "50× liquid supplement", "location": "Culture Media Comparison Box, −20° behind bench" },
+  "n2a-supplement": { "name": "N2 Supplement-A", "vendor": "STEMCELL Technologies", "catalog": "07152", "storage": "-20°C freezer (behind bench, Culture Media Comparison Box); aliquot into 1 mL portions after first thaw", "form": "100× liquid supplement", "location": "Culture Media Comparison Box, −20° behind bench" }
 }

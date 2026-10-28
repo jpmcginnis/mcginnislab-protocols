@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adam's Media — McGinnis Lab Protocols</title>
+<link rel="stylesheet" href="/assets/style.css?v=3">
+</head>
+<body>
+  <div class="breadcrumb">
+    <a href="/">Protocols</a> &nbsp;·&nbsp; Media Formulations &nbsp;·&nbsp; Adam's Media
+  </div>
+
+  <h1>Adam's Media <span class="scale">— 100 mL batch</span></h1>
+  <div class="sub">Neurobasal-based medium with weighed-in bulk salts for HEPES buffering. Simplest and most stable of the McGinnis Lab media-comparison set.</div>
+
+  <div class="specs">
+    <div class="spec-item"><span class="spec-label">pH</span><span class="spec-value">7.2–7.4</span></div>
+    <div class="spec-item"><span class="spec-label">Shelf life</span><span class="spec-value">14 days at 4°C</span></div>
+    <div class="spec-item"><span class="spec-label">Make fresh</span><span class="spec-value">Every 2 weeks</span></div>
+    <div class="spec-item"><span class="spec-label">Incubator</span><span class="spec-value">37°C / 5% CO₂</span></div>
+  </div>
+
+  <div class="callout">
+    Neurobasal is HEPES-free — the 357.5 mg HEPES weighed into Step 1 is what buffers Adam's. <strong>B-27 variant lock:</strong> must be Gibco 17504044 to match other comparison conditions.
+  </div>
+
+  <div class="recipe-header">
+    <h2>Batch protocol</h2>
+    <div class="controls">
+      <span class="progress" id="progress">0 of 0 checked</span>
+      <button id="reset-checklist" type="button">Reset checklist</button>
+    </div>
+  </div>
+
+  <table class="recipe" data-checklist-id="adams-v1">
+    <thead>
+      <tr><th class="check"></th><th class="num">Step</th><th>Action / Component</th><th>Amount</th><th>Notes</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="check"><input type="checkbox" data-row="1"></td><td class="num">1a</td><td>Weigh <span class="reagent" data-reagent="nacl">NaCl</span> into 250 mL beaker with stir bar</td><td class="vol-primary">99.3 mg</td><td></td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="2"></td><td class="num">1b</td><td>Weigh <span class="reagent" data-reagent="hepes">HEPES</span></td><td class="vol-primary">357.5 mg</td><td class="notes">~15 mM — this is what buffers the batch</td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="3"></td><td class="num">1c</td><td>Weigh <span class="reagent" data-reagent="d-glucose">D-Glucose</span></td><td class="vol-primary">234.2 mg</td><td></td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="4"></td><td class="num">1d</td><td>Weigh <span class="reagent" data-reagent="mgso4-7h2o">MgSO₄·7H₂O</span></td><td class="vol-primary">24.6 mg</td><td></td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="5"></td><td class="num">2</td><td>Add <span class="reagent" data-reagent="neurobasal">Neurobasal</span> to dissolve bulk salts</td><td class="vol-primary">~50 mL</td><td class="notes">5–10 min stirring</td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="6"></td><td class="num">3a</td><td><span class="reagent" data-reagent="b27-supplement">B-27 supplement</span></td><td class="vol-primary">2 mL</td><td class="notes">Media Comparison Box, −20° behind bench</td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="7"></td><td class="num">3b</td><td><span class="reagent" data-reagent="glutamax">GlutaMAX-I</span></td><td class="vol-primary">1 mL</td><td></td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="8"></td><td class="num">3c</td><td><span class="reagent" data-reagent="ab-am">AB/AM</span> <span style="color:var(--muted);text-decoration:line-through;">(was Pen-Strep)</span></td><td class="vol-primary">1 mL</td><td class="notes">Replaces Pen-Strep in Adam's protocol</td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="9"></td><td class="num">4</td><td>Transfer to 100 mL cylinder, rinse beaker, bring to volume with <span class="reagent" data-reagent="neurobasal">Neurobasal</span></td><td class="vol-primary">100 mL</td><td></td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="10"></td><td class="num">5a</td><td>Check pH</td><td class="vol-primary">7.2–7.4</td><td></td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="11"></td><td class="num">5b</td><td>Filter</td><td class="vol-primary">0.22 μm PES</td><td></td></tr>
+    </tbody>
+  </table>
+
+  <h2>Handling notes</h2>
+  <ul style="font-size:13px;color:var(--muted);line-height:1.6;">
+    <li><strong>Neurobasal is HEPES-free</strong> — the 15 mM HEPES weighed in is what buffers Adam's.</li>
+    <li><strong>B-27 variant lock:</strong> must be Gibco 17504044 (matches other conditions using B-27 in the comparison).</li>
+    <li><strong>Pen-Strep → AB/AM:</strong> the McGinnis Lab uses AB/AM (antibiotic/antimycotic) instead of plain Pen-Strep, which also covers fungal contamination.</li>
+    <li><strong>Checklist:</strong> state saved per-browser via localStorage; refresh-safe. Hit "Reset checklist" for a new batch.</li>
+  </ul>
+
+  <footer>
+    <a href="https://mcginnislab.org">mcginnislab.org</a>
+    &nbsp;·&nbsp;
+    <a href="/">protocols</a>
+  </footer>
+
+  <script src="/assets/reagents.js"></script>
+  <script src="/assets/checklist.js?v=2"></script>
+</body>
+</html>

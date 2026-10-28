@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ting's Media — McGinnis Lab Protocols</title>
+<link rel="stylesheet" href="/assets/style.css?v=3">
+</head>
+<body>
+  <div class="breadcrumb">
+    <a href="/">Protocols</a> &nbsp;·&nbsp; Media Formulations &nbsp;·&nbsp; Ting's Media
+  </div>
+
+  <h1>Ting's Media <span class="scale">— 20 mL batch</span></h1>
+  <div class="sub">MEM Eagle + horse serum + insulin + fresh ascorbic acid. Shortest shelf life of the set; matches feeding schedule.</div>
+
+  <div class="specs">
+    <div class="spec-item"><span class="spec-label">pH</span><span class="spec-value">7.2–7.3</span></div>
+    <div class="spec-item"><span class="spec-label">Shelf life</span><span class="spec-value">3 days at 4°C</span></div>
+    <div class="spec-item"><span class="spec-label">Make fresh</span><span class="spec-value">Every 2–3 days</span></div>
+    <div class="spec-item"><span class="spec-label">Incubator</span><span class="spec-value">35°C / 5% CO₂, humidified</span></div>
+  </div>
+
+  <div class="callout">
+    <strong>Ascorbic acid must be dissolved fresh and used immediately.</strong> Horse serum: gentle mix only — don't vortex. Note the lower incubator temp (35°C) and higher humidity vs. the other media.
+  </div>
+
+  <div class="recipe-header">
+    <h2>Batch protocol</h2>
+    <div class="controls">
+      <span class="progress" id="progress">0 of 0 checked</span>
+      <button id="reset-checklist" type="button">Reset checklist</button>
+    </div>
+  </div>
+
+  <table class="recipe" data-checklist-id="tings-v1">
+    <thead>
+      <tr><th class="check"></th><th class="num">Step</th><th>Action / Component</th><th>Amount</th><th>Notes</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="check"><input type="checkbox" data-row="1"></td><td class="num">1</td><td>Add <span class="reagent" data-reagent="mem-eagle">MEM Eagle liquid</span> to 50 mL beaker with stir bar</td><td class="vol-primary">~10 mL</td><td></td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="2"></td><td class="num">2a</td><td>Weigh <span class="reagent" data-reagent="hepes">HEPES</span></td><td class="vol-primary">143 mg</td><td></td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="3"></td><td class="num">2b</td><td>Weigh <span class="reagent" data-reagent="d-glucose">D-Glucose</span></td><td class="vol-primary">27 mg</td><td></td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="4"></td><td class="num">2c</td><td>Weigh <span class="reagent" data-reagent="mgso4-7h2o">MgSO₄·7H₂O</span></td><td class="vol-primary">5.9 mg</td><td class="notes">5–10 min stirring to dissolve</td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="5"></td><td class="num">3</td><td>Weigh <span class="reagent" data-reagent="l-ascorbic-acid">ascorbic acid</span> in separate vial, dissolve in ~1 mL <span class="reagent" data-reagent="milli-q">Milli-Q water</span></td><td class="vol-primary">3.5 mg</td><td class="notes">Use immediately</td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="6"></td><td class="num">4</td><td>Add <span class="reagent" data-reagent="horse-serum">heat-inactivated horse serum</span></td><td class="vol-primary">4 mL</td><td class="notes">Gentle mix, don't vortex</td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="7"></td><td class="num">5</td><td>Add <span class="reagent" data-reagent="insulin-working">insulin working stock</span> (1 mg/mL)</td><td class="vol-primary">20 μL</td><td></td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="8"></td><td class="num">6</td><td>Add fresh ascorbic acid solution (use all)</td><td class="vol-primary">~1 mL</td><td class="notes">The full dissolved amount from Step 3</td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="9"></td><td class="num">7</td><td>Transfer to 20 mL cylinder, rinse beaker, bring to volume with <span class="reagent" data-reagent="mem-eagle">MEM Eagle liquid</span></td><td class="vol-primary">20 mL</td><td></td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="10"></td><td class="num">8a</td><td>Check pH</td><td class="vol-primary">7.2–7.3</td><td></td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="11"></td><td class="num">8b</td><td>Filter</td><td class="vol-primary">25 mm 0.22 μm PES syringe filter</td><td></td></tr>
+    </tbody>
+  </table>
+
+  <h2>Documented deviations from Ting's paper</h2>
+  <p style="font-size:13px;color:var(--muted);line-height:1.6;">
+    Using liquid MEM with Earle's salts + glutamine (Gibco 11095-098) rather than making from powder means several components come from the MEM baseline rather than being added separately:
+  </p>
+  <ul style="font-size:13px;color:var(--muted);line-height:1.6;">
+    <li><strong>NaHCO₃:</strong> ~26 mM (from MEM baseline) vs. paper's 15 mM</li>
+    <li><strong>CaCl₂:</strong> 1.8 mM (from MEM baseline) vs. paper's 1 mM</li>
+    <li><strong>L-glutamine:</strong> ~2 mM (from MEM) vs. paper's 0.5 mM GlutaMAX</li>
+    <li><strong>No GlutaMAX added</strong> — MEM has built-in glutamine</li>
+  </ul>
+
+  <h2>Handling notes</h2>
+  <ul style="font-size:13px;color:var(--muted);line-height:1.6;">
+    <li><strong>Horse serum:</strong> heat-inactivate (56°C × 30 min) once when first opened, then aliquot into 4 mL portions at −20°C. Each batch thaws one aliquot.</li>
+    <li><strong>Insulin working stock:</strong> 1 mg/mL diluted from vendor stock; kept −20°C.</li>
+    <li><strong>Ascorbic acid:</strong> dissolve fresh for each batch; use within minutes.</li>
+    <li><strong>Checklist:</strong> state saved per-browser via localStorage; refresh-safe. Hit "Reset checklist" for a new batch.</li>
+  </ul>
+
+  <footer>
+    <a href="https://mcginnislab.org">mcginnislab.org</a>
+    &nbsp;·&nbsp;
+    <a href="/">protocols</a>
+  </footer>
+
+  <script src="/assets/reagents.js"></script>
+  <script src="/assets/checklist.js?v=2"></script>
+</body>
+</html>

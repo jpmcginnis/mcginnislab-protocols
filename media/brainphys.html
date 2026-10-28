@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BrainPhys — McGinnis Lab Protocols</title>
+<link rel="stylesheet" href="/assets/style.css?v=3">
+</head>
+<body>
+  <div class="breadcrumb">
+    <a href="/">Protocols</a> &nbsp;·&nbsp; Media Formulations &nbsp;·&nbsp; BrainPhys
+  </div>
+
+  <h1>BrainPhys <span class="scale">— 100 mL batch</span></h1>
+  <div class="sub">All-commercial STEMCELL formulation. Simplest of the media-comparison set — three liquids combined.</div>
+
+  <div class="specs">
+    <div class="spec-item"><span class="spec-label">Total time</span><span class="spec-value">~5–10 min</span></div>
+    <div class="spec-item"><span class="spec-label">Shelf life</span><span class="spec-value">14 days at 4°C</span></div>
+    <div class="spec-item"><span class="spec-label">Make fresh</span><span class="spec-value">Every 2 weeks</span></div>
+    <div class="spec-item"><span class="spec-label">Incubator</span><span class="spec-value">37°C / 5% CO₂</span></div>
+  </div>
+
+  <div class="callout">
+    <strong>No growth factors added.</strong> Design choice: avoid BDNF/GDNF confounds with the other conditions in the media comparison. BrainPhys itself is refrigerated-only — never freeze the base medium.
+  </div>
+
+  <div class="recipe-header">
+    <h2>Batch protocol</h2>
+    <div class="controls">
+      <span class="progress" id="progress">0 of 0 checked</span>
+      <button id="reset-checklist" type="button">Reset checklist</button>
+    </div>
+  </div>
+
+  <table class="recipe" data-checklist-id="brainphys-v1">
+    <thead>
+      <tr><th class="check"></th><th class="num">Step</th><th>Action / Component</th><th>Amount</th><th>Notes</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="check"><input type="checkbox" data-row="1"></td><td class="num">1</td><td>Add <span class="reagent" data-reagent="brainphys-medium">BrainPhys Neuronal Medium</span> to 250 mL beaker or bottle</td><td class="vol-primary">97 mL</td><td></td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="2"></td><td class="num">2</td><td>Add <span class="reagent" data-reagent="sm1-supplement">SM1 supplement</span></td><td class="vol-primary">2 mL</td><td class="notes">50× liquid; from −20° Culture Media Comparison Box</td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="3"></td><td class="num">3</td><td>Add <span class="reagent" data-reagent="n2a-supplement">N2 Supplement-A</span></td><td class="vol-primary">1 mL</td><td class="notes">100× liquid; from −20° Culture Media Comparison Box</td></tr>
+      <tr><td class="check"><input type="checkbox" data-row="4"></td><td class="num">4</td><td>Mix gently, filter-sterilize 0.22 μm PES</td><td class="vol-primary">100 mL</td><td class="notes">Filter optional if all components are pre-sterile (SM1 and N2-A are supplied sterile — verify lot)</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Handling notes</h2>
+  <ul style="font-size:13px;color:var(--muted);line-height:1.6;">
+    <li><strong>SM1 and N2-A</strong> arrive frozen. Thaw once, aliquot into 2 mL and 1 mL portions respectively, store −20°C. Don't repeatedly freeze/thaw.</li>
+    <li><strong>BrainPhys is refrigerated only, not frozen.</strong></li>
+    <li><strong>No labile components</strong> — 2 weeks at 4°C is standard STEMCELL guidance for the finished medium.</li>
+    <li><strong>Checklist:</strong> state saved per-browser via localStorage; refresh-safe. Hit "Reset checklist" for a new batch.</li>
+  </ul>
+
+  <h2>Source</h2>
+  <p style="font-size:13px;line-height:1.6;">
+    Standard STEMCELL Technologies BrainPhys + supplements workflow. Vendor documentation: <a href="https://www.stemcell.com/brainphys-neuronal-medium.html">BrainPhys Neuronal Medium (STEMCELL 05790)</a>.
+  </p>
+
+  <footer>
+    <a href="https://mcginnislab.org">mcginnislab.org</a>
+    &nbsp;·&nbsp;
+    <a href="/">protocols</a>
+  </footer>
+
+  <script src="/assets/reagents.js"></script>
+  <script src="/assets/checklist.js?v=2"></script>
+</body>
+</html>
