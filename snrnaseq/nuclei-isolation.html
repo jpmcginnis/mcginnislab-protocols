@@ -83,18 +83,6 @@
   <h3 class="substep-h">Ice-cold PBS + 1% BSA</h3>
   <p style="font-size:13px;line-height:1.5;margin:0 0 10px;">For pre-coating sample tubes, SmartStrainers, and collection tubes.</p>
 
-  <h2 class="section-h">Take with you to FACS core (handwritten list)</h2>
-  <div class="mat-list">
-    1× Nuclei Extraction Buffer (with RNase inhibitor added)<br>
-    1× Resuspension buffer (volume per sample size above)<br>
-    1× Ice-cold PBS + 1% BSA (for pre-coating)<br>
-    1× Cooler <span class="hw">(don't have — may need to order?)</span><br>
-    1× gentleMACS C Tube<br>
-    1 ea 70 μm (purple) + 30 μm (yellow) SmartStrainers<br>
-    4× 15 mL tubes<br>
-    1× 1 mL pipette + tips
-  </div>
-
   <h2 class="section-h">Reagents &amp; equipment</h2>
   <ul style="font-size:13px;line-height:1.6;">
     <li><strong>Nuclei Extraction Buffer</strong> — Miltenyi 130-128-024 (100 mL / 25 extractions; 2–8°C, do not freeze)</li>
@@ -139,14 +127,6 @@
     <h3 class="section-h">2.2 Nuclei extraction protocol</h3>
     <p style="font-size:12px;color:var(--muted);"><strong>Work fast until tissue is dissociated; keep samples on ice at all steps.</strong> Volumes below are for up to 200 mg tissue per extraction.</p>
 
-    <div class="hw-block">
-      <strong>Lab adjustments (handwritten, bottom of page):</strong>
-      <ol style="margin: 4px 0 0 20px;">
-        <li>Reduce volume per 2-2-2.</li>
-        <li>Mortar + pestle with LOW volume of extraction buffer. Transfer to C Tube. Use MORE extraction buffer to rinse the mortar + pestle.</li>
-      </ol>
-    </div>
-
     <table class="recipe">
       <thead><tr><th class="check"></th><th class="num">#</th><th>Action</th></tr></thead>
       <tbody>
@@ -155,11 +135,11 @@
         <tr><td class="check"><input type="checkbox" data-row="7"></td><td class="num">3</td><td>Close gentleMACS C Tube and place it on the gentleMACS Dissociator. <em>Close tightly beyond the first resistance.</em></td></tr>
         <tr><td class="check"><input type="checkbox" data-row="8"></td><td class="num">4</td><td>Run gentleMACS Program <strong>4C_nuclei_1</strong> on the gentleMACS Dissociator. <span class="hw">Miltenyi 4C_nuclei_1 OK start.</span></td></tr>
         <tr><td class="check"><input type="checkbox" data-row="9"></td><td class="num">5</td><td>After termination of the program, detach C Tube from the gentleMACS Dissociator and place the C Tube immediately on ice. <em>Depending on tissue type, additional 5–10 min incubation on ice after dissociation might be needed to optimize cell lysis. Over-lysis causes aggregation/damage.</em></td></tr>
-        <tr><td class="check"><input type="checkbox" data-row="10"></td><td class="num">6</td><td>Apply nuclei suspension to a MACS SmartStrainer (<strong>70 μm, purple</strong>; <span class="hw">pre-coat with BSA 1:2</span>) placed on a 15 mL tube. <em>For increased nuclei recovery, use low-binding tubes.</em> <span class="hw">Go up to Single-Cell Core.</span></td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="10"></td><td class="num">6</td><td>Apply nuclei suspension to a MACS SmartStrainer (<strong>70 μm, purple</strong>; <span class="hw">pre-coat with BSA 1:2</span>) placed on a <strong>15 mL tube pre-coated with 1% BSA in PBS</strong>. <em>For increased nuclei recovery, use low-binding tubes.</em> <span class="hw">Go up to Single-Cell Core.</span></td></tr>
         <tr><td class="check"><input type="checkbox" data-row="11"></td><td class="num">7</td><td>Wash MACS SmartStrainer with 2 mL ice-cold lysis buffer. <em>Alternatively for max cell recovery, rinse used C Tube with ice-cold lysis buffer before adding to the SmartStrainer.</em></td></tr>
-        <tr><td class="check"><input type="checkbox" data-row="12"></td><td class="num">8</td><td>Discard MACS SmartStrainer and centrifuge nuclei suspension at <strong>300 × <em>g</em>, 4°C, 5 min</strong>. Carefully aspirate supernatant completely. <span class="hw">Centrifuge at 10k core.</span></td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="12"></td><td class="num">8</td><td>Discard MACS SmartStrainer and centrifuge nuclei suspension at <strong>300 × <em>g</em>, 4°C, 5 min</strong>. Carefully aspirate supernatant completely.</td></tr>
         <tr><td class="check"><input type="checkbox" data-row="13"></td><td class="num">9</td><td>Resuspend nuclei pellet with <strong>resuspension buffer</strong> (volume per sample-size table above) by slowly and gently pipetting the sample up and down ~10 times.</td></tr>
-        <tr><td class="check"><input type="checkbox" data-row="14"></td><td class="num">10</td><td>Apply nuclei suspension to a MACS SmartStrainer (<strong>30 μm, yellow</strong>; <span class="hw">pre-coat with BSA</span>) placed on a 15 mL tube. <em>For myelin-rich brain, a myelin removal step is strongly recommended.</em></td></tr>
+        <tr><td class="check"><input type="checkbox" data-row="14"></td><td class="num">10</td><td>Apply nuclei suspension to a MACS SmartStrainer (<strong>30 μm, yellow</strong>; <span class="hw">pre-coat with BSA</span>) placed on a <strong>15 mL tube pre-coated with 1% BSA in PBS</strong>. <em>For myelin-rich brain, a myelin removal step is strongly recommended.</em></td></tr>
         <tr><td class="check"><input type="checkbox" data-row="15"></td><td class="num">11</td><td>Collect nuclei suspension and proceed immediately with downstream applications (snRNA-seq or nuclei sorting). <em>If debris amount still too high, purify the suspension using a cell sorter (e.g. MACSQuant Tyto).</em></td></tr>
       </tbody>
     </table>
@@ -185,10 +165,9 @@
       <li>Don't add all lysis buffer to sample until arriving at FACS core.</li>
       <li>gentleMACS program <strong>4C_nuclei_1</strong> is the right starting program.</li>
       <li>Strainers used: <strong>70 μm (purple)</strong> and <strong>30 μm (yellow)</strong>. No 100 μm. Pre-coat with BSA (1:2 on the 70 μm, plain BSA on the 30 μm).</li>
-      <li>Centrifuge at the 10k core; "go up to single-cell core" for the 70 μm strainer step.</li>
+      <li>"Go up to single-cell core" for the 70 μm strainer step.</li>
       <li>Pre-coat tubes and strainers with <strong>ice-cold PBS + 1% BSA</strong>.</li>
       <li>Sony cell sorter at FACS core; <strong>DAPI provided by the FACS Core</strong>.</li>
-      <li>Lab adjustments summary: (1) reduce volume per 2-2-2; (2) mortar + pestle with LOW volume of extraction buffer, transfer to C Tube, then use more buffer to rinse the mortar + pestle.</li>
       <li>Cooler may need to be ordered — not currently in lab supply.</li>
     </ul>
   </div>
