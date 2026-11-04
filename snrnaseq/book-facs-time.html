@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to book FACS time — McGinnis Lab Protocols</title>
+<link rel="stylesheet" href="/assets/style.css?v=3">
+<style>
+  .screenshot {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 12px 0;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+  }
+  .screenshot-caption {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: -4px;
+    margin-bottom: 16px;
+  }
+  .form-field-list {
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 6px 0 0 20px;
+    padding: 0;
+  }
+  .form-field-list li { margin-bottom: 2px; }
+  .field-label {
+    font-weight: 600;
+    color: var(--fg);
+  }
+  .field-value {
+    color: var(--muted);
+  }
+</style>
+</head>
+<body>
+  <div class="breadcrumb">
+    <a href="/">Protocols</a> &nbsp;·&nbsp; Single-Nucleus RNA Sequencing &nbsp;·&nbsp; Book FACS time
+  </div>
+
+  <h1>How to book FACS time <span class="scale">— BCM Cytometry and Cell Sorting Core</span></h1>
+  <div class="sub">Reserve the Sony MA900 and confirm a technician is available for the slot. Sorter used for our nuclei isolation workflow.</div>
+
+  <div class="recipe-header">
+    <h2>Procedure</h2>
+    <div class="controls">
+      <span class="progress" id="progress">0 of 0 checked</span>
+      <button id="reset-checklist" type="button">Reset checklist</button>
+    </div>
+  </div>
+
+  <table class="recipe" data-checklist-id="book-facs-time-v1">
+    <thead><tr><th class="check"></th><th class="num">#</th><th>Action</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="check"><input type="checkbox" data-row="1"></td>
+        <td class="num">1</td>
+        <td>Log in to the BCM iLab scheduler: <a href="https://bcm.ilab.agilent.com/account/login">bcm.ilab.agilent.com/account/login</a>.</td>
+      </tr>
+      <tr>
+        <td class="check"><input type="checkbox" data-row="2"></td>
+        <td class="num">2</td>
+        <td>Click the <strong>three-horizontal-lines menu</strong> (top left), then find and click <strong>"Cytometry and Cell Sorting Core"</strong>.</td>
+      </tr>
+      <tr>
+        <td class="check"><input type="checkbox" data-row="3"></td>
+        <td class="num">3</td>
+        <td>You start on the <strong>"Schedule Equipment"</strong> tab. Scroll down to <strong>"Cell Sorting"</strong> and click. Then click the line with the <strong>Sony MA900</strong>.</td>
+      </tr>
+      <tr>
+        <td class="check"><input type="checkbox" data-row="4"></td>
+        <td class="num">4</td>
+        <td>Scroll down and click through days to find a day where the Sony MA900 is free for several hours beginning <strong>around 11am or so</strong>. <em>Make note of the date and time.</em></td>
+      </tr>
+      <tr>
+        <td class="check"><input type="checkbox" data-row="5"></td>
+        <td class="num">5</td>
+        <td>Click and drag <strong>at least 3 hours</strong>, beginning <strong>30 min before you plan on showing up</strong>.</td>
+      </tr>
+      <tr>
+        <td class="check"><input type="checkbox" data-row="6"></td>
+        <td class="num">6</td>
+        <td>Fill in the form's right side as shown below:
+          <ul class="form-field-list">
+            <li><span class="field-label">Match the sorter:</span> <span class="field-value">Sony MA900 M903</span></li>
+            <li><span class="field-label">What kind of appointment:</span> <span class="field-value">Assisted</span></li>
+            <li><span class="field-label">Cell type:</span> <span class="field-value">Human</span></li>
+            <li><span class="field-label">Are the cells fixed?</span> <span class="field-value">No</span></li>
+            <li><span class="field-label">Chip size and pressure:</span> <span class="field-value">130 μm / 9 psi</span></li>
+            <li><span class="field-label">Fluorophores:</span> <span class="field-value">DAPI</span></li>
+            <li><span class="field-label">Mode of collection:</span> <span class="field-value">5 mL tubes</span></li>
+            <li><span class="field-label">What you're sorting:</span> <span class="field-value">Nuclei sorting</span></li>
+            <li><span class="field-label">Other prompts:</span> <span class="field-value">"Other"; "Yes — on this instrument and everything is the same"; Yes to previous consultation; Yes to NucBlu DAPI; "I agree"</span></li>
+          </ul>
+          Submit / reserve.
+          <img src="/snrnaseq/img/book-facs-form.png" alt="Screenshot of the FACS reservation form filled out as described" class="screenshot">
+          <div class="screenshot-caption">iLab reservation form — fields filled in as above.</div>
+        </td>
+      </tr>
+      <tr>
+        <td class="check"><input type="checkbox" data-row="7"></td>
+        <td class="num">7</td>
+        <td>Click back to <strong>"Cytometry and Cell Sorting Core"</strong>. Scroll down to the technicians' schedule at the <strong>"Staff Availability"</strong> tab, click, and select <strong>"CCSC Staff Availability"</strong>.</td>
+      </tr>
+      <tr>
+        <td class="check"><input type="checkbox" data-row="8"></td>
+        <td class="num">8</td>
+        <td>Make sure a <strong>technician is available at the time you need</strong>. <em>If not, you'll have to find a new time where the MA900 is available AND a technician is available.</em></td>
+      </tr>
+      <tr>
+        <td class="check"><input type="checkbox" data-row="9"></td>
+        <td class="num">9</td>
+        <td>They will send you <strong>confirmations of the time</strong>.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Notes</h2>
+  <ul style="font-size:13px;color:var(--muted);line-height:1.6;">
+    <li>Start the reservation <strong>30 min earlier</strong> than you plan to arrive — you need buffer for setup.</li>
+    <li>Lab default: Sony MA900 (M903), 130 μm chip, 9 psi, DAPI, 5 mL collection tubes. Human nuclei, unfixed.</li>
+    <li>The core sends a confirmation email after both the equipment reservation and the technician availability are confirmed.</li>
+    <li>Pair this with the <a href="/snrnaseq/nuclei-isolation">Nuclei isolation (Miltenyi gentleMACS, FACS core)</a> protocol — the sort happens immediately after the 30 μm filter step.</li>
+  </ul>
+
+  <footer>
+    <a href="https://mcginnislab.org">mcginnislab.org</a>
+    &nbsp;·&nbsp;
+    <a href="/">protocols</a>
+  </footer>
+
+  <script src="/assets/reagents.js"></script>
+  <script src="/assets/checklist.js?v=2"></script>
+</body>
+</html>
