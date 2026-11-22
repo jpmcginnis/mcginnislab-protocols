@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Osmette 5002 A — McGinnis Lab Protocols</title>
+<link rel="stylesheet" href="/assets/style.css?v=3">
+<style>
+  ol.steps { padding-left: 28px; margin: 12px 0 28px; }
+  ol.steps > li { margin-bottom: 20px; line-height: 1.6; }
+  ol.steps > li > ul { margin: 8px 0 0; padding-left: 22px; }
+  ol.steps > li > ul > li { margin-bottom: 6px; line-height: 1.55; }
+  ol.steps > li > ul ul { margin: 4px 0 0; padding-left: 22px; }
+  .watchout { padding: 12px 16px; background: var(--warn-bg); color: var(--warn-fg); border-radius: 4px; font-size: 13px; margin: 20px 0 48px; }
+  .watchout strong { font-weight: 600; }
+  .watchout ul { margin: 6px 0 0; padding-left: 20px; }
+  .watchout li { margin-bottom: 4px; line-height: 1.5; }
+  .cal-section {
+    margin-top: 56px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .cal-section h2 {
+    font-size: 13px;
+    color: var(--fg);
+    margin: 20px 0 4px;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  .cal-section h2:first-of-type { margin-top: 0; }
+  .cal-section .cal-sub { font-size: 12px; margin: 0 0 8px; color: var(--muted); }
+  .cal-section h3 { font-size: 12px; font-weight: 600; margin: 14px 0 4px; color: var(--fg); }
+  .cal-section ol, .cal-section ul { padding-left: 22px; margin: 4px 0 10px; }
+  .cal-section li { margin-bottom: 4px; line-height: 1.55; }
+  .cal-section strong { color: var(--fg); font-weight: 600; }
+</style>
+</head>
+<body>
+  <div class="breadcrumb">
+    <a href="/">Protocols</a> &nbsp;·&nbsp; Equipment usage &nbsp;·&nbsp; Osmometer
+  </div>
+
+  <h1>Osmette 5002 A <span class="scale">— Quick Protocol</span></h1>
+  <div class="sub">Freezing-point osmometer. 0.2–2.0 mL per read, ~60 sec each.</div>
+
+  <ol class="steps">
+    <li>
+      <strong>Turn it on.</strong> Front panel, lower left — flip the OPERATE switch to <strong>OPERATE</strong>.
+      <ul>
+        <li>Wait ~15 min until the red <strong>COOL</strong> light starts cycling on and off.</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Check the blue bath fluid.</strong>
+      <ul>
+        <li>Peek into the well. Fluid should be at its original level.</li>
+        <li>If low, slowly pour in OSMETTE bath fluid (blue) until a little overflows into the plastic tray on the right. <em>Only use OSMETTE antifreeze.</em></li>
+      </ul>
+    </li>
+    <li>
+      <strong>Run a sample.</strong>
+      <ul>
+        <li>Make sure <strong>RANGE</strong> is on <strong>0–2</strong>.</li>
+        <li>Pipette into a clean, dry sample tube — no bubbles:
+          <ul>
+            <li>Big tube (2.0 mL): pipette 2.0 mL</li>
+            <li>Small tube (0.2 mL): pipette 0.2 mL (0.25 mL ideal; 0.3 mL is even more forgiving)</li>
+          </ul>
+        </li>
+        <li>Raise the head, swap in your tube, lower the head smoothly.</li>
+        <li>Walk away for ~60 sec. Display counts up from negative → 1000 → seeds → <strong>READ</strong> light comes on → number locks.</li>
+        <li>That number is your <strong>mOsm/kg</strong>.</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Between samples.</strong>
+      <ul>
+        <li>Raise head, pull tube, very carefully wipe probe + seed wire with a Kimwipe (not gauze).</li>
+        <li>Put the next tube in, or park a clean empty tube in the well.</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Shut down.</strong>
+      <ul>
+        <li>Clean empty tube in the well, head lowered into it, OPERATE switch to <strong>OFF</strong>.</li>
+      </ul>
+    </li>
+  </ol>
+
+  <div class="watchout">
+    <strong>Watch out for:</strong>
+    <ul>
+      <li>If RANGE is on <strong>1–3</strong>, add 1000 to the reading.</li>
+      <li>Never force a tube into a frosted well — turn off for a few min to defrost.</li>
+      <li>Never lower the head onto a tube with ice in it (breaks the probe).</li>
+    </ul>
+  </div>
+
+  <section class="cal-section">
+    <h2>Checking calibration</h2>
+    <p class="cal-sub">Daily, or before a run of unknowns.</p>
+    <ul>
+      <li>Pour a 290 mOsm CON-TROL ampule (or 500 mOsm standard) into a clean, dry tube — never pipette straight from the bottle.</li>
+      <li>Pipette from that tube into a fresh sample tube (2.0 mL or 0.2 mL).</li>
+      <li>Run it like a normal sample.</li>
+      <li>Should read within ±2 mOsm of label value. If not, recalibrate.</li>
+    </ul>
+
+    <h2>Recalibrating</h2>
+    <p class="cal-sub">Only if the check fails.</p>
+
+    <h3>First range (0–2000 mOsm)</h3>
+    <ol>
+      <li>RANGE → <strong>0–2</strong>, OPERATE → <strong>SPECIAL</strong>.</li>
+      <li>Run a 500 mOsm standard. Just before READ light comes on, adjust <strong>CAL I</strong> with the screwdriver so display reads 500.</li>
+      <li>Switch back to OPERATE, freeze a fresh 500 standard to verify.</li>
+      <li>Repeat with a 100 mOsm standard, adjusting <strong>CAL II</strong> to read 100.</li>
+    </ol>
+
+    <h3>Second range (1000–3000 mOsm) — only if you actually use this range</h3>
+    <ol>
+      <li>RANGE → <strong>1–3</strong>, OPERATE → <strong>SPECIAL</strong>.</li>
+      <li>Run a 1500 mOsm standard, adjust <strong>CAL III</strong> so display reads 500 (remember +1000 rule).</li>
+      <li>Switch back to OPERATE and verify with a fresh 1500 standard.</li>
+    </ol>
+  </section>
+
+  <footer>
+    <a href="https://mcginnislab.org">mcginnislab.org</a>
+    &nbsp;·&nbsp;
+    <a href="/">protocols</a>
+  </footer>
+</body>
+</html>
