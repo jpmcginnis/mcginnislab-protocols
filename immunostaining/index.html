@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Immunostaining — McGinnis Lab Protocols</title>
+<link rel="stylesheet" href="/assets/style.css?v=3">
+<style>
+  .under-construction {
+    display: inline-block;
+    padding: 4px 12px;
+    background: var(--warn-bg);
+    color: var(--warn-fg);
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 14px;
+  }
+  h2.section {
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: none;
+    letter-spacing: 0;
+    color: var(--fg);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 6px;
+    margin: 40px 0 14px;
+  }
+  h2.section:first-of-type { margin-top: 24px; }
+  h3.sub {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--fg);
+    margin: 22px 0 6px;
+  }
+  h4.recipe {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--fg);
+    margin: 14px 0 4px;
+  }
+  .recipe-meta { font-size: 12px; color: var(--muted); margin: 0 0 6px; }
+  ul.ingredients {
+    padding-left: 22px;
+    margin: 4px 0 4px;
+  }
+  ul.ingredients li {
+    margin-bottom: 3px;
+    line-height: 1.5;
+    font-size: 13px;
+  }
+  .step-note {
+    font-size: 12px;
+    color: var(--muted);
+    margin: 4px 0 10px;
+    padding-left: 22px;
+  }
+  ol.steps { padding-left: 28px; margin: 12px 0 24px; }
+  ol.steps > li { margin-bottom: 14px; line-height: 1.6; }
+  ol.steps > li > ul { margin: 6px 0 0; padding-left: 22px; }
+  ol.steps > li > ul > li { margin-bottom: 4px; line-height: 1.55; }
+  .callout-critical {
+    padding: 12px 16px;
+    background: #fde8e8;
+    color: #7a1a1a;
+    border-left: 3px solid #c0392b;
+    border-radius: 3px;
+    font-size: 13px;
+    margin: 14px 0;
+    line-height: 1.55;
+  }
+  .callout-critical strong { font-weight: 700; }
+  .callout-watch {
+    padding: 10px 14px;
+    background: var(--warn-bg);
+    color: var(--warn-fg);
+    border-radius: 3px;
+    font-size: 13px;
+    margin: 10px 0;
+    line-height: 1.55;
+  }
+</style>
+</head>
+<body>
+  <div class="breadcrumb">
+    <a href="/">Protocols</a> &nbsp;·&nbsp; Immunostaining
+  </div>
+
+  <h1>Immunostaining <span class="scale">— Full Workflow</span></h1>
+  <div class="sub">4% PFA fixation → OCT freezing → RNA In Situ Core slicing → slide prep + IHC → microscope.</div>
+  <span class="under-construction">Under construction — items still being added</span>
+
+  <h2 class="section">1. Tissue processing</h2>
+  <p class="section-sub" style="color:var(--muted);font-size:13px;margin:0 0 16px;">4% PFA in PBS → sucrose cryoprotection → mounting in OCT and freezing on dry ice.</p>
+
+  <h3 class="sub">Solutions</h3>
+
+  <h4 class="recipe">4% PFA</h4>
+  <ul class="ingredients">
+    <li>30 mL PBS</li>
+    <li>10 mL 16% PFA</li>
+  </ul>
+
+  <h4 class="recipe">20% Sucrose (for cryoprotection)</h4>
+  <p class="recipe-meta">To make 500 mL:</p>
+  <ul class="ingredients">
+    <li>~371 mL milliQ H₂O</li>
+    <li>5.96 g Na₂HPO₄ (dibasic, anhydrous)</li>
+    <li>0.803 g NaH₂PO₄·H₂O (monobasic, monohydrate)</li>
+  </ul>
+  <p class="step-note">Dissolve, add H₂O up to 400 mL.</p>
+  <ul class="ingredients">
+    <li>100 g ultra-pure sucrose</li>
+  </ul>
+  <p class="step-note">Dissolve, add H₂O up to 500 mL. Vacuum filter if keeping more than 1 week.</p>
+
+  <h4 class="recipe">30% Sucrose (for cryoprotection)</h4>
+  <p class="recipe-meta">To make 500 mL:</p>
+  <ul class="ingredients">
+    <li>~321 mL milliQ H₂O</li>
+    <li>5.96 g Na₂HPO₄ (dibasic, anhydrous)</li>
+    <li>0.803 g NaH₂PO₄·H₂O (monobasic, monohydrate)</li>
+  </ul>
+  <p class="step-note">Dissolve, add H₂O up to 400 mL.</p>
+  <ul class="ingredients">
+    <li>150 g ultra-pure sucrose</li>
+  </ul>
+  <p class="step-note">Dissolve, add H₂O up to 500 mL. Vacuum filter if keeping more than 1 week.</p>
+
+  <h3 class="sub">Fixation &amp; cryoprotection</h3>
+  <ol class="steps">
+    <li>
+      <strong>Fix in 4% PFA.</strong> On day of tissue harvest, remove media from the surrounding well and add 1 mL of 4% PFA to the well, plus several drops on top of the slice — enough that the slice is covered.
+      <div class="callout-watch">Do not add PFA forcefully — the slice can flip and you'll lose track of which side was the top. Very bad.</div>
+      <ul>
+        <li>Fix overnight at 4°C, or 2 hr at RT rocking gently.</li>
+      </ul>
+    </li>
+    <li>
+      <strong>20% sucrose, overnight at 4°C.</strong> Remove the PFA from the well. Add 20% sucrose the same way, sit overnight at 4°C.
+    </li>
+    <li>
+      <strong>30% sucrose, overnight at 4°C.</strong> Remove the 20% sucrose and add 30% sucrose the same way. Overnight at 4°C.
+    </li>
+    <li>
+      <strong>Ready for OCT.</strong> After the 30% sucrose step, the tissue is ready to be mounted in OCT.
+    </li>
+  </ol>
+
+  <h3 class="sub">OCT mounting</h3>
+  <p class="recipe-meta">Need: big tub of flat dry ice, intermediate-size plastic cartridges, OCT, scalpel, forceps, P20 pipette.</p>
+  <ol class="steps">
+    <li>
+      <strong>Cut out the mesh bottom of the insert.</strong> Use scalpel and forceps. Flip the insert so the top of the tissue slice is now face-down against the bottom of the plastic cartridge.
+      <div class="callout-watch">This face-down side is the first slice that will land on the first microscope slide at the core — track orientation from here on.</div>
+    </li>
+    <li>
+      <strong>Peel the mesh off.</strong> Gently try to peel the mesh off the tissue, keeping the tissue on the plastic floor. If it won't peel cleanly without damaging the tissue, leave the mesh insert adherent to the back of the slice.
+    </li>
+    <li>
+      <strong>Aspirate residual sucrose.</strong> Use a P20 to aspirate off all 30% sucrose you can without disturbing the tissue.
+      <div class="callout-watch">The more 30% sucrose left behind, the worse the tissue freezes and the harder it is for the core to cryotome cleanly.</div>
+    </li>
+    <li>
+      <strong>Add OCT to cover the slice.</strong>
+    </li>
+    <li>
+      <strong>Rest 15 min at room temperature before freezing.</strong>
+      <div class="callout-critical"><strong>Critical.</strong> After adding OCT, let the slice sit in the gel OCT on the bench for at least 15 min. This lets residual sucrose diffuse out, so the tissue freezes cleanly and sections properly.</div>
+    </li>
+    <li>
+      <strong>Freeze on dry ice.</strong> Place the cartridge onto the flat dry ice, making sure the tissue is still at the bottom. If it has floated up, gently press it back down and put it on ice so it freezes with the tissue near the bottom.
+    </li>
+  </ol>
+
+  <h2 class="section">2. Submitting order for slicing to RNA In Situ Core</h2>
+  <p class="section-sub" style="color:var(--muted);font-size:13px;margin:0 0 16px;font-style:italic;">To be written.</p>
+
+  <h2 class="section">3. Slide preparation and immunostaining</h2>
+  <p class="section-sub" style="color:var(--muted);font-size:13px;margin:0 0 16px;font-style:italic;">To be written.</p>
+
+  <h2 class="section">4. Microscope usage</h2>
+  <p class="section-sub" style="color:var(--muted);font-size:13px;margin:0 0 16px;font-style:italic;">To be written.</p>
+
+  <footer>
+    <a href="https://mcginnislab.org">mcginnislab.org</a>
+    &nbsp;·&nbsp;
+    <a href="/">protocols</a>
+  </footer>
+</body>
+</html>
